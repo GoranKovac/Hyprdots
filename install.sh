@@ -103,3 +103,9 @@ mkdir ~/Pictures/Wallpapers
 curl https://raw.githubusercontent.com/Larcele/8-bit-day/refs/heads/master/07-Early-Evening.png -o ~/Pictures/Wallpapers/8bitday.png
 
 sudo updatedb
+
+sudo chmod +x ~/.config/waybar/waybar-screenrecorder/screenrecorder2
+sudo chmod +x ~/.config/rofi/launcher/launcher.sh
+sudo chmod +x ~/.config/rofi/run/run.sh
+sudo chmod +x ~/.config/rofi/locate/rofi-locate.sh
+sudo chmod +x ~/.config/hypr/hypr_gamemode.sh
