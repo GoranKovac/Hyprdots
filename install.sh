@@ -119,6 +119,3 @@ cd paru
 makepkg -si
 
 paru -S ttf-fixedsys-excelsior-linux
-
-cd ~
-rm -f Hyperdots
