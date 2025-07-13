@@ -68,6 +68,22 @@ pkgs=(
     discord
 
     steam
+
+    pavucontrol
+
+    zed
+
+    zls
+
+    ttf-font-awesome
+
+    paru
+
+    nano
+
+    kitty
+
+    fish
 )
 
 sudo pacman -S "${pkgs[@]}"
@@ -79,4 +95,4 @@ sudo sed -i 's/RTIRQ_NAME_LIST=".\+"/RTIRQ_NAME_LIST="firewire xhci_hcd snd snd-
 sudo usermod -aG realtime $USER
 sudo usermod -aG gamemode $USER
 
-cp -a config/ ~/.config
+cp -aT config ~/.config
