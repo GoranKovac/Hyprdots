@@ -51,7 +51,7 @@ pkgs=(
     #file manager
     nautilus
 
-    #Nautilus NEEDED FOR WINDOWS NETWORK DISCOVERY (DEFFINATLY)
+    #Nautilus NEEDED FOR WINDOWS NETWORK DISCOVERY (DEFINITELY)
     gvfs-wsdd
 
     #Nautilus NEEDED FOR WINDOWS NETWORK DISCOVERY (MAYBE!!!)
