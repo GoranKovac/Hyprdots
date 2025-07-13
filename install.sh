@@ -60,6 +60,7 @@ pkgs=(
     #Gamemode Daemon
     gamemode
 
+    #Programs
     vlc
     vlc-plugins-all
 
@@ -90,6 +91,10 @@ pkgs=(
     reaper
 
     reapack
+
+    htop
+
+    nvtop
 
     mlocate
 )
