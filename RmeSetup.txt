@@ -1,0 +1,10 @@
+## Needed for RME not to bug out when timeline skipping, audio comming from 2 separate apps etc (audio freeze happens without it
+sudo nano /etc/rtirq.conf
+RTIRQ_NAME_LIST="firewire xhci_hcd snd snd-usb i8042"
+
+# Need to create virtual 2 channel device for games (to use RME)
+# Without it some games will have no audio or some wont start at all
+
+# Already created/available in pipewire folder
+# info from here: https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/Virtual-Devices#behringer-umc404hd-speakersheadphones-virtual-sinks
+#Mic needs to be adjusted (if want to use RME inputs)

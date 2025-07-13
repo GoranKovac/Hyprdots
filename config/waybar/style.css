@@ -1,0 +1,159 @@
+* {
+    /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
+    font-family:
+        "Fira Sans Semibold", Fontawesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    transition: background-color 0.3s ease-out;
+}
+
+window#waybar {
+    background: rgba(26, 27, 38, 0.75);
+    color: #c0caf5;
+    font-family:
+        SpaceMono Nerd Font,
+        feather;
+    /* transition: background-color 0.5s; */
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    background: rgba(0, 0, 8, 0.7);
+    margin: 5px 10px;
+    padding: 0 5px;
+    border-radius: 15px;
+}
+.modules-left {
+    padding: 0;
+}
+.modules-center {
+    padding: 0 10px;
+}
+
+#clock {
+    padding: 0 5px;
+    font-weight: 600;
+    border-radius: 15px;
+}
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#language,
+#mpd {
+    padding: 0 10px;
+    border-radius: 15px;
+}
+#clock:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#temperature:hover,
+#backlight:hover,
+#network:hover,
+#pulseaudio:hover {
+    color: black;
+    background: white;
+}
+#wireplumber:hover,
+#custom-media:hover,
+#tray:hover,
+#mode:hover,
+#idle_inhibitor:hover,
+#scratchpad:hover,
+#power-profiles-daemon:hover,
+#language:hover,
+#mpd:hover {
+    background: rgba(26, 27, 38, 0.9);
+}
+
+#workspaces button {
+    /* background: transparent; */
+    /* font-family:
+        SpaceMono Nerd Font,
+        feather; */
+    font-weight: 900;
+    color: #c0caf5;
+    border: 20px;
+    border-radius: 15px;
+}
+
+#workspaces button.active {
+    background: rgba(170, 217, 254, 0.8);
+    color: black;
+}
+
+#workspaces button:hover {
+    /* background: rgba(255, 255, 255, 1); */
+    color: black;
+}
+
+#custom-arch {
+    margin-left: 5px;
+    padding: 0 10px;
+    font-size: 25px;
+    transition: color 0.5s;
+}
+#custom-arch:hover {
+    color: #1793d1;
+}
+
+#custom-power {
+    /* background: rgba(255, 255, 255, 0.3); */
+    border-radius: 20px;
+    padding: 0 10px;
+    /* font-size: 16.5px; */
+    /* text-shadow: 0px 2px 4px black; */
+}
+#custom-power:hover {
+    border-radius: 20px;
+    /* margin: 0px 10px; */
+    /* font-size: 16.5px; */
+    background: white;
+    color: black;
+}
+
+menu {
+    /* border-radius: 15px; */
+    background: #0c0f10;
+    color: #c0caf5;
+}
+
+menuitem:hover {
+    /* border-radius: 15px; */
+    background: rgba(170, 217, 254, 0.8);
+    color: black;
+}
+
+#taskbar button.active {
+    background: rgba(170, 217, 254, 0.8);
+    border-radius: 5px;
+}
+
+#custom-screenrecorder {
+    margin: 0px 10px;
+    font-size: 16.5px;
+}
+
+#custom-screenrecorder:active:hover {
+    background: rgba(170, 217, 254, 0.8);
+    color: black;
+}
+
+#custom-screenrecorder2 {
+    padding: 0 20px;
+    color: red;
+    border-bottom: 4px solid;
+}

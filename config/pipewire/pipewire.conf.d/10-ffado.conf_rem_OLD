@@ -1,0 +1,34 @@
+# Always at 48kHz sample rate and 5.33ms latency
+#context.properties = {
+#    default.clock.allowed-rates = [ 48000 ]
+#    default.clock.rate = 48000
+#    default.clock.min-quantum = 256
+#    default.clock.max-quantum = 256
+#    default.clock.quantum = 256
+#}
+
+# Load driver
+context.modules = [
+{   name = libpipewire-module-ffado-driver
+    args = {
+        driver.mode       = duplex
+        ffado.devices     = [ "hw:0" ]
+        ffado.period-size = 128
+        ffado.period-num  = 3
+        ffado.sample-rate = 48000
+        ffado.slave-mode  = false
+        ffado.snoop-mode  = false
+        ffado.verbose     = 0
+        #ffado.realtime    = true
+        latency.internal.input  = 0
+        latency.internal.output = 0
+        audio.position    = [ FL FR ]
+        source.props = {
+             #extra sink properties
+        }
+        sink.props = {
+             #extra sink properties
+        }
+    }
+}
+]
