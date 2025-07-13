@@ -38,8 +38,12 @@ pkgs=(
 
     #file manager
     nautilus
-    #gvfs-wsdd //NEEDED FOR WINDOWS NETWORK DISCOVERY (DEFFINATLY)
-    #gvfs-smb //NEEDED FOR WINDOWS NETWORK DISCOVERY (MAYBE!!!)
+
+    #Nautilus NEEDED FOR WINDOWS NETWORK DISCOVERY (DEFFINATLY)
+    gvfs-wsdd
+
+    #Nautilus NEEDED FOR WINDOWS NETWORK DISCOVERY (MAYBE!!!)
+    gvfs-smb
 
     #usb mounting
     udiskie
