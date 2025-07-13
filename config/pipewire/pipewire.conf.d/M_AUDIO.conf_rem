@@ -1,9 +1,0 @@
-# Always at 48kHz sample rate and 5.33ms latency
-context.properties = {
-    #default.clock.allowed-rates = [ 48000 ]
-    default.clock.rate = 48000
-    default.clock.min-quantum = 64
-    default.clock.max-quantum = 1024
-    default.clock.quantum = 128
-}
-
