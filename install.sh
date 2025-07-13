@@ -9,6 +9,18 @@ pkgs=(
     #needed for drag and drop around
     xdg-desktop-portal-gtk
 
+    #Default hyprland terminal
+    kitty
+
+    #Shell with autocomplete etc
+    fish
+
+    #CLI editor
+    nano
+    
+    #Needed for audio control
+    pavucontrol
+
     #wallpaper manager
     hyprpaper
 
@@ -60,47 +72,23 @@ pkgs=(
     #Gamemode Daemon
     gamemode
 
-    #Programs
+    #Fonts for waybar etc
+    noto-fonts
+    ttf-font-awesome
+
+    #MP and Codecs
     vlc
     vlc-plugins-all
 
-    firefox
+    #Faster search
+    mlocate
 
-    discord
-
-    steam
-
-    pavucontrol
-
-    zed
-
-    zls
-
-    ttf-font-awesome
-
-    nano
-
-    kitty
-
-    fish
-
-    godot
-
-    blender
-
-    reaper
-
-    reapack
-
+    #Process, Gpu monitor
     htop
-
     nvtop
 
-    noto-fonts
-
-    yazi
-
-    mlocate
+    firefox
+    discord
 )
 
 sudo pacman -S "${pkgs[@]}"
@@ -131,3 +119,6 @@ cd paru
 makepkg -si
 
 paru -S ttf-fixedsys-excelsior-linux
+
+cd ~
+rm -f Hyperdots
