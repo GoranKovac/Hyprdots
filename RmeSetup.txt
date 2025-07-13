@@ -1,4 +1,5 @@
-## Needed for RME not to bug out when timeline skipping, audio comming from 2 separate apps etc (audio freeze happens without it
+## Needed for RME800 not to bug out when timeline skipping, audio comming from 2 separate apps etc (audio freeze happens without it)
+## This sets priority on firewire card which seems to fix the issue
 sudo nano /etc/rtirq.conf
 RTIRQ_NAME_LIST="firewire xhci_hcd snd snd-usb i8042"
 
@@ -7,4 +8,4 @@ RTIRQ_NAME_LIST="firewire xhci_hcd snd snd-usb i8042"
 
 # Already created/available in pipewire folder
 # info from here: https://gitlab.freedesktop.org/pipewire/pipewire/-/wikis/Virtual-Devices#behringer-umc404hd-speakersheadphones-virtual-sinks
-#Mic needs to be adjusted (if want to use RME inputs)
+# Mic needs to be adjusted (if want to use RME inputs)
