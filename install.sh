@@ -83,6 +83,14 @@ pkgs=(
 
     fish
 
+    godot
+
+    blender
+
+    reaper
+
+    reapack
+
     mlocate
 )
 
