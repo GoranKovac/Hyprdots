@@ -60,13 +60,10 @@ pkgs=(
     #usb mounting
     udiskie
 
-    #screen recorder
-    wf-recorder
-
-    #RME/Reaper/JACK
+    #RME800/Reaper/JACK
     realtime-privileges
 
-    #RME not to bugout with firewire
+    #RME800 not to bugout with firewire
     rtirq
 
     #Gamemode Daemon
@@ -87,13 +84,14 @@ pkgs=(
     htop
     nvtop
 
+    #General
     firefox
     discord
 )
 
 sudo pacman -S "${pkgs[@]}"
 
-#Add config for RME not to bug out
+#Add config for RME800 not to bug out (increases priority to firewire card)
 sudo sed -i 's/RTIRQ_NAME_LIST=".\+"/RTIRQ_NAME_LIST="firewire xhci_hcd snd snd-usb i8042"'/ /etc/rtirq.conf
 
 ## add user to realtime and gamemode group
@@ -105,6 +103,7 @@ cp -aT config ~/.config
 mkdir -p ~/Pictures/Wallpapers
 curl https://raw.githubusercontent.com/Larcele/8-bit-day/refs/heads/master/07-Early-Evening.png -o ~/Pictures/Wallpapers/8bitday.png
 
+#Update database for locate
 sudo updatedb
 
 sudo chmod +x ~/.config/waybar/waybar-screenrecorder/screenrecorder2
@@ -113,9 +112,11 @@ sudo chmod +x ~/.config/rofi/run/run.sh
 sudo chmod +x ~/.config/rofi/locate/rofi-locate.sh
 sudo chmod +x ~/.config/hypr/hypr_gamemode.sh
 
+#Install paru
 sudo pacman -S --needed base-devel
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
 
+#Best font in universe
 paru -S ttf-fixedsys-excelsior-linux
