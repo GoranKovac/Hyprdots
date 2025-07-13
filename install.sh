@@ -96,6 +96,10 @@ pkgs=(
 
     nvtop
 
+    noto-fonts
+
+    yazi
+
     mlocate
 )
 
