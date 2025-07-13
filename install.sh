@@ -99,4 +99,7 @@ sudo usermod -aG gamemode $USER
 
 cp -aT config ~/.config
 
+mkdir ~/Pictures/Wallpapers
+curl https://raw.githubusercontent.com/Larcele/8-bit-day/refs/heads/master/07-Early-Evening.png -o ~/Pictures/Wallpapers/8bitday.png
+
 sudo updatedb
