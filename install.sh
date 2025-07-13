@@ -84,6 +84,8 @@ pkgs=(
     kitty
 
     fish
+
+    mlocate
 )
 
 sudo pacman -S "${pkgs[@]}"
@@ -96,3 +98,5 @@ sudo usermod -aG realtime $USER
 sudo usermod -aG gamemode $USER
 
 cp -aT config ~/.config
+
+sudo updatedb
