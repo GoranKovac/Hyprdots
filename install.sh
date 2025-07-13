@@ -77,8 +77,6 @@ pkgs=(
 
     ttf-font-awesome
 
-    paru
-
     nano
 
     kitty
@@ -99,7 +97,7 @@ sudo usermod -aG gamemode $USER
 
 cp -aT config ~/.config
 
-mkdir ~/Pictures/Wallpapers
+mkdir -p ~/Pictures/Wallpapers
 curl https://raw.githubusercontent.com/Larcele/8-bit-day/refs/heads/master/07-Early-Evening.png -o ~/Pictures/Wallpapers/8bitday.png
 
 sudo updatedb
@@ -109,3 +107,10 @@ sudo chmod +x ~/.config/rofi/launcher/launcher.sh
 sudo chmod +x ~/.config/rofi/run/run.sh
 sudo chmod +x ~/.config/rofi/locate/rofi-locate.sh
 sudo chmod +x ~/.config/hypr/hypr_gamemode.sh
+
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+
+paru -S ttf-fixedsys-excelsior-linux
