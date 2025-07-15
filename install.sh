@@ -78,7 +78,7 @@ pkgs=(
     vlc-plugins-all
 
     #Faster search
-    mlocate
+    fd
 
     #Process, Gpu monitor
     htop
@@ -87,6 +87,9 @@ pkgs=(
     #General
     firefox
     discord
+
+    #TUI file manager
+    yazi
 )
 
 sudo pacman -S "${pkgs[@]}"
@@ -103,8 +106,9 @@ cp -aT config ~/.config
 mkdir -p ~/Pictures/Wallpapers
 curl https://raw.githubusercontent.com/Larcele/8-bit-day/refs/heads/master/07-Early-Evening.png -o ~/Pictures/Wallpapers/8bitday.png
 
+## Not needed because 'fd'
 #Update database for locate
-sudo updatedb
+#sudo updatedb
 
 sudo chmod +x ~/.config/waybar/waybar-screenrecorder/screenrecorder2
 sudo chmod +x ~/.config/rofi/launcher/launcher.sh
