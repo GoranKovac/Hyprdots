@@ -77,8 +77,8 @@ pkgs=(
     vlc
     vlc-plugins-all
 
-    #Faster search
-    fd
+    #faster search, not needed because of 'fd'
+    #mlocate
 
     #Process, Gpu monitor
     htop
