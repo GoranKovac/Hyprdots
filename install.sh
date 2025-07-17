@@ -57,9 +57,6 @@ pkgs=(
     #Nautilus NEEDED FOR WINDOWS NETWORK DISCOVERY (MAYBE!!!)
     gvfs-smb
 
-    #usb mounting
-    udiskie
-
     #RME800/Reaper/JACK
     realtime-privileges
 
@@ -90,6 +87,12 @@ pkgs=(
 
     #TUI file manager
     yazi
+    #fuzzy search for yazi
+    fzf
+    #better find for yazi
+    fd
+    #rip grep for yazi
+    rg
 )
 
 sudo pacman -S "${pkgs[@]}"
