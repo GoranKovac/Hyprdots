@@ -67,6 +67,9 @@ pkgs=(
     libffado
     python-pyqt5
 
+    #Node Audio Patchbay
+    qpwgraph
+
     #Gamemode Daemon
     gamemode
 
