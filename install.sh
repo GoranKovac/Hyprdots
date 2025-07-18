@@ -16,7 +16,7 @@ pkgs=(
     fish
 
     #CLI editor
-    nano
+    vim
     
     #Needed for audio control
     pavucontrol
