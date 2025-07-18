@@ -63,6 +63,10 @@ pkgs=(
     #RME800 not to bugout with firewire
     rtirq
 
+    #RME FFADO-MIXER (CONTROL PANEL)
+    libffado
+    python-pyqt5
+
     #Gamemode Daemon
     gamemode
 
