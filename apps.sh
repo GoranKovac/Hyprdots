@@ -8,7 +8,6 @@ pkgs=(
     blender
     reaper
     reapack
-    yazi
 )
 
 sudo pacman -S "${pkgs[@]}"
