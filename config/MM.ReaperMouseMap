@@ -1,0 +1,29 @@
+[MM_CTX_ARRANGE_MMOUSE]
+mm_0=2 m
+
+[MM_CTX_ENVPT_DBLCLK]
+mm_0=2 m
+
+[MM_CTX_ITEM]
+mm_0=62 m
+mm_1=64 m
+mm_5=32 m
+
+[MM_CTX_ITEMFADE]
+mm_4=13 m
+
+[MM_CTX_ITEMLOWER]
+mm_0=1 m
+mm_1=4 m
+mm_2=2 m
+mm_3=36 m
+mm_4=58 m
+
+[MM_CTX_MIDI_NOTE_CLK]
+mm_0=1 m
+mm_4=2 m
+
+[MM_CTX_TRACK]
+mm_0=25 m
+mm_1=27 m
+
