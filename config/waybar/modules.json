@@ -91,7 +91,7 @@
 
   "clock": {
     "format": "{:%H:%M | %e %B} ",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "tooltip-format": "<span font='Fira Sans Semibold 12'><big>{:%d %B}</big>\n<tt><small>{calendar}</small></tt></span>",
     "calendar": {
       "mode": "month",
       "mode-mon-col": 3,
@@ -100,7 +100,7 @@
       }
     },
     "actions": {
-      "on-click-right": "mode"
+      "on-click": "mode"
     }
   },
 
