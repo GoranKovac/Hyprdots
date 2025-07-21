@@ -99,9 +99,13 @@ curl https://raw.githubusercontent.com/Larcele/8-bit-day/refs/heads/master/07-Ea
 
 sudo chmod +x ~/.config/waybar/waybar-screenrecorder/screenrecorder2
 sudo chmod +x ~/.config/rofi/launcher/launcher.sh
-sudo chmod +x ~/.config/rofi/run/run.sh
 sudo chmod +x ~/.config/rofi/locate/rofi-locate.sh
-sudo chmod +x ~/.config/hypr/hypr_gamemode.sh
+sudo chmod +x ~/.config/rofi/monitor_sel/monitor_sel.sh
+sudo chmod +x ~/.config/rofi/powermenu/powermenu.sh
+sudo chmod +x ~/.config/rofi/run/run.sh
+sudo chmod +x ~/.config/hypr/scripts/hypr_gamemode.sh
+sudo chmod +x ~/.config/hypr/scripts/hdrop.sh
+sudo chmod +x ~/.config/hypr/scripts/hpick.sh
 
 sudo chmod +x ~/.config/hypr/apps.sh
 sudo chmod +x ~/.config/hypr/rme.sh
