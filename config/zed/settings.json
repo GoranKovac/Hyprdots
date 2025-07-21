@@ -1,0 +1,67 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "base_keymap": "VSCode",
+  "features": {
+    "edit_prediction_provider": "none"
+  },
+  "notification_panel": {
+    "dock": "right"
+  },
+  "minimap": {
+    "show": "always"
+  },
+  "vim_mode": true,
+  "vim": {
+    "toggle_relative_line_numbers": true
+  },
+  "agent": {
+    "dock": "right"
+  },
+  "terminal": {
+    "dock": "bottom",
+    "shell": {
+      "program": "fish"
+    }
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "project_panel": {
+    "dock": "left"
+  },
+  "buffer_font_family": "Fixedsys Excelsior",
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Macchiato",
+    "dark": "One Dark"
+  },
+  "languages": {
+    "Lua": {
+      "inlay_hints": {
+        "enabled": true,
+        "show_type_hints": true,
+        "show_parameter_hints": true,
+        "show_other_hints": true
+      }
+    }
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  }
+}
