@@ -17,6 +17,11 @@
 
 dir="$HOME/.config/rofi/locate/"
 theme='style'
-
+#read -rsn1 input
+#notify-send `"$input"`
 #xdg-open "$(locate / | rofi -threads 0 -width 100 -dmenu -i -p "locate:")"
-locate / | rofi -threads 0 -width 100 -dmenu -i -p -theme ${dir}/${theme}.rasi "locate" | xargs -r xdg-open
+
+#locate / | rofi -use-hot-keys -threads 0 -width 100 -dmenu -i -p -theme ${dir}/${theme}.rasi "locate" | xargs -r xdg-open
+
+fd --type f . / -H -u | rofi -width 100 -dmenu -i -p FILES -theme ${dir}/${theme}.rasi "locate" | xargs -r xdg-open
+# fd --type f pdf . $HOME | rofi -keep-right -dmenu -i -p FILES -multi-select | xargs -I {} xdg-open {}
