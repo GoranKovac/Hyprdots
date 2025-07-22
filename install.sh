@@ -103,6 +103,7 @@ sudo chmod +x ~/.config/rofi/locate/rofi-locate.sh
 sudo chmod +x ~/.config/rofi/monitor_sel/monitor_sel.sh
 sudo chmod +x ~/.config/rofi/powermenu/powermenu.sh
 sudo chmod +x ~/.config/rofi/run/run.sh
+sudo chmod +x ~/.config/rofi/clipboard/clipboard.sh
 sudo chmod +x ~/.config/hypr/scripts/hypr_gamemode.sh
 sudo chmod +x ~/.config/hypr/scripts/hdrop.sh
 sudo chmod +x ~/.config/hypr/scripts/hpick.sh
