@@ -21,6 +21,9 @@ pkgs=(
     #Needed for audio control
     pavucontrol
 
+    #usb auto mount
+    udiskie
+
     #wallpaper manager
     hyprpaper
 
@@ -41,6 +44,9 @@ pkgs=(
 
     #clipboard manager
     cliphist
+
+    #clipboard copy persist (keep copy data if app is closed)
+    wl-clip-persist
 
     #notifications
     dunst
