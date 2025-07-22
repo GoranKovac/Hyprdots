@@ -126,24 +126,13 @@
     "sort-by-app-id": true,
     "icon-size": 22
   },
-
   "custom/screenrecorder": {
-    "exec": "$HOME/.config/waybar/waybar-screenrecorder/screenrecorder status",
-    "interval": "once",
-    "signal": 1,
-    "return-type": "json",
-    "tooltip": true,
-    "format": "{}",
-    "on-click": "$HOME/.config/waybar/waybar-screenrecorder/screenrecorder toggle region"
-  },
-
-  "custom/screenrecorder2": {
     "format": "",
     "exec": "echo ",
     "interval": 1,
     "tooltip": "false",
     "exec-if": "pgrep wf-recorder",
-    "on-click": "$HOME/.config/waybar/waybar-screenrecorder/screenrecorder2",
+    "on-click": "$HOME/.config/waybar/waybar-screenrecorder/screenrecorder",
     "signal": 8
   }
 }

@@ -10,8 +10,7 @@
   "modules-left": ["hyprland/workspaces"], //"custom/arch",
   "modules-center": ["wlr/taskbar"],
   "modules-right": [
-    // "custom/screenrecorder",
-    "custom/screenrecorder2",
+    "custom/screenrecorder",
     "tray",
     //"idle_inhibitor",
     "pulseaudio",
