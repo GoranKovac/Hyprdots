@@ -1,4 +1,5 @@
-#!/usr/bin/env sh
+#!/bin/bash
+
 color=$(hyprpicker -a)
 wl-copy $color
 notify-send "Color Picked" "<span color='$color'>$color</span>"

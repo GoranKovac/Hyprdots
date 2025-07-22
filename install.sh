@@ -113,6 +113,7 @@ sudo chmod +x ~/.config/rofi/clipboard/clipboard.sh
 sudo chmod +x ~/.config/hypr/scripts/hypr_gamemode.sh
 sudo chmod +x ~/.config/hypr/scripts/hdrop.sh
 sudo chmod +x ~/.config/hypr/scripts/hpick.sh
+sudo chmod +x ~/.config/hypr/scripts/reaper_yb.sh
 
 sudo chmod +x ~/.config/hypr/apps.sh
 sudo chmod +x ~/.config/hypr/rme.sh

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Current Theme
 dir="$HOME/.config/rofi/monitor_sel/"
@@ -21,6 +21,7 @@ uptime="`uptime -p | sed -e 's/up //g' | sed -e 's/hour/hr/g' | sed -e 's/minute
 primary='Primary'
 gamemode='GameMode'
 gamemode_off='GameMode Off'
+restart_waybar='Restart Waybar'
 all='All'
 # lock='Lock'
 # suspend='Suspend'
@@ -44,7 +45,7 @@ rofi_cmd() {
 
 # Pass variables to rofi dmenu
 run_rofi() {
-	echo -e "$all\n$primary\n$gamemode\n$gamemode_off" | rofi_cmd
+    echo -e "$all\n$primary\n$gamemode\n$gamemode_off\n$restart_waybar" | rofi_cmd
 }
 
 # Execute Command
@@ -82,6 +83,9 @@ run_cmd() {
        elif [[ $1 == '--gamemode_off' ]]; then
            hyprctl reload config-only -q
            notify-send "HYPR GAME MODE OFF"
+       elif [[ $1 == '--restart_waybar' ]]; then
+           killall waybar && hyprctl dispatch exec waybar
+           notify-send "Waybar Restarted"
 	fi
 }
 
@@ -100,4 +104,7 @@ case ${chosen} in
     $gamemode_off)
 		run_cmd --gamemode_off
             ;;
+    $restart_waybar)
+		run_cmd --restart_waybar
+                    ;;
 esac
