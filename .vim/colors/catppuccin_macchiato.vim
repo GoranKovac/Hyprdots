@@ -2,7 +2,7 @@
 
 set background=dark
 hi clear
-
+"hi! NonText ctermbg=NONE guibg=NONE
 if exists('syntax on')
     syntax reset
 endif
@@ -48,8 +48,8 @@ function! s:hi(group, guisp, guifg, guibg, gui, cterm)
     let cmd = cmd . " guifg=" . a:guifg
   endif
   if a:guibg != ""
-    let cmd = cmd . " guibg=" . a:guibg
-  endif
+    let cmd = cmd . " guibg=" . "NONE"
+    endif
   if a:gui != ""
     let cmd = cmd . " gui=" . a:gui
   endif
@@ -161,3 +161,5 @@ let g:terminal_ansi_colors = [
   \ s:surface1, s:red, s:green, s:yellow, s:blue, s:pink, s:teal, s:subtext1,
   \ s:surface2, s:red, s:green, s:yellow, s:blue, s:pink, s:teal, s:subtext0
 \ ]
+
+hi Normal ctermbg=None
