@@ -35,7 +35,7 @@ window {
 
     /* properties for all widgets */
     enabled:                     true;
-    border-radius:               6px;
+    border-radius:               0px;
     cursor:                      "default";
     background-color:            @background;
     border-color:                #8AB1CF;
@@ -74,7 +74,7 @@ textbox-prompt-colon {
     expand:                      false;
     str:                         "Find";
     padding:                     12px 20px 12px 15px;
-    border-radius:               6px;
+    border-radius:               0px;
     background-color:            #8AB1CF;
     text-color:                  @background;
 }
@@ -83,7 +83,7 @@ entry {
     expand:                      false;
     width:                       200px;
     padding:                     12px 16px 8px 16px;
-    border-radius:               6px;
+    border-radius:               0px;
     background-color:            @background;
     text-color:                  inherit;
     cursor:                      text;
@@ -103,7 +103,7 @@ mode-switcher{
 }
 button {
     padding:                     12px 22px 12px 16px;
-    border-radius:               6px;
+    border-radius:               0px;
     background-color:            @background;
     text-color:                  inherit;
     cursor:                      pointer;
@@ -129,7 +129,7 @@ listview {
 
     spacing:                     8px;
     margin: 			        16px 12px;
-    border-radius: 		         6px;
+    border-radius: 		         0px;
     background-color:            #1e1e2e;
     text-color:                  @foreground;
     cursor:                      "default";
@@ -140,7 +140,7 @@ element {
     enabled:                     true;
     spacing:                     0px;
     padding:                     4px;
-    border-radius:               6px;
+    border-radius:               0px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;
