@@ -37,7 +37,7 @@ pkgs=(
     waybar
 
     #launcher
-    rofi
+    rofi-wayland
 
     #screen recorder
     wf-recorder
