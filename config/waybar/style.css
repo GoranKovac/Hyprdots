@@ -35,6 +35,10 @@ window#waybar {
     font-weight: 600;
     border-radius: 15px;
 }
+#jack {
+    padding: 0 5px;
+    font-weight: 600;
+}
 #battery,
 #cpu,
 #memory,
