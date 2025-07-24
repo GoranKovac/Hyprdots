@@ -70,6 +70,11 @@
       <object class="GtkSeparatorMenuItem" id="delimiter6"/>
     </child>
 	<child>
+		<object class="GtkMenuItem" id="Auto SR">
+			<property name="label">Auto SR</property>
+        </object>
+	</child>
+	<child>
 		<object class="GtkMenuItem" id="44100">
 			<property name="label">44100Hz</property>
         </object>

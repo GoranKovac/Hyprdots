@@ -120,7 +120,7 @@
     "menu": "on-click",
     "menu-file": "~/.config/waybar/buffer_menu.xml",
     "menu-actions": {
-      "Auto": "pw-metadata -n settings 0 clock.force-quantum 0",
+      "Auto Buffer": "pw-metadata -n settings 0 clock.force-quantum 0",
       "32": "pw-metadata -n settings 0 clock.force-quantum 32",
       "64": "pw-metadata -n settings 0 clock.force-quantum 64",
       "128": "pw-metadata -n settings 0 clock.force-quantum 128",
@@ -130,6 +130,7 @@
       "2048": "pw-metadata -n settings 0 clock.force-quantum 2048",
       "4096": "pw-metadata -n settings 0 clock.force-quantum 4096",
       "8192": "pw-metadata -n settings 0 clock.force-quantum 8192",
+      "Auto SR": "pw-metadata -n settings 0 clock.force-rate 0",
       "44100": "pw-metadata -n settings 0 clock.force-rate 44100",
       "48000": "pw-metadata -n settings 0 clock.force-rate 48000",
       "96000": "pw-metadata -n settings 0 clock.force-rate 96000"
