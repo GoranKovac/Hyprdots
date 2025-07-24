@@ -14,6 +14,7 @@
     "tray",
     //"idle_inhibitor",
     "pulseaudio",
+    "custom/buffer",
     "network",
     // "cpu",
     // "memory",

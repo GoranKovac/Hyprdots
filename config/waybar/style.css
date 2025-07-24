@@ -117,7 +117,24 @@ window#waybar {
     /* font-size: 16.5px; */
     /* text-shadow: 0px 2px 4px black; */
 }
+
 #custom-power:hover {
+    border-radius: 20px;
+    /* margin: 0px 10px; */
+    /* font-size: 16.5px; */
+    background: white;
+    color: black;
+}
+
+#custom-buffer {
+    /* background: rgba(255, 255, 255, 0.3); */
+    border-radius: 20px;
+    padding: 0 10px;
+    /* font-size: 16.5px; */
+    /* text-shadow: 0px 2px 4px black; */
+}
+
+#custom-buffer:hover {
     border-radius: 20px;
     /* margin: 0px 10px; */
     /* font-size: 16.5px; */

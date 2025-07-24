@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="GtkMenu" id="menu">
+	<child>
+		<object class="GtkMenuItem" id="Auto">
+			<property name="label">Auto</property>
+        </object>
+	</child>
+	<child>
+		<object class="GtkMenuItem" id="32">
+			<property name="label">32</property>
+        </object>
+	</child>
+	<child>
+		<object class="GtkMenuItem" id="64">
+			<property name="label">64</property>
+        </object>
+	</child>
+	<child>
+		<object class="GtkMenuItem" id="128">
+			<property name="label">128</property>
+        </object>
+	</child>
+	<child>
+		<object class="GtkMenuItem" id="256">
+			<property name="label">256</property>
+        </object>
+	</child>
+	<child>
+		<object class="GtkMenuItem" id="512">
+			<property name="label">512</property>
+        </object>
+	</child>
+	<child>
+		<object class="GtkMenuItem" id="1024">
+			<property name="label">1024</property>
+        </object>
+	</child>
+	<child>
+		<object class="GtkMenuItem" id="2048">
+			<property name="label">2048</property>
+        </object>
+	</child>
+	<child>
+		<object class="GtkMenuItem" id="4096">
+			<property name="label">4096</property>
+        </object>
+	</child>
+	<child>
+		<object class="GtkMenuItem" id="8192">
+			<property name="label">8192</property>
+        </object>
+	</child>
+	<child>
+      <object class="GtkSeparatorMenuItem" id="delimiter1"/>
+    </child>
+	<child>
+      <object class="GtkSeparatorMenuItem" id="delimiter2"/>
+    </child>
+	<child>
+      <object class="GtkSeparatorMenuItem" id="delimiter3"/>
+    </child>
+	<child>
+      <object class="GtkSeparatorMenuItem" id="delimiter4"/>
+    </child>
+	<child>
+      <object class="GtkSeparatorMenuItem" id="delimiter5"/>
+    </child>
+	<child>
+      <object class="GtkSeparatorMenuItem" id="delimiter6"/>
+    </child>
+	<child>
+		<object class="GtkMenuItem" id="44100">
+			<property name="label">44100Hz</property>
+        </object>
+	</child>
+	<child>
+		<object class="GtkMenuItem" id="48000">
+			<property name="label">48000Hz</property>
+        </object>
+	</child>
+	<child>
+		<object class="GtkMenuItem" id="96000">
+			<property name="label">96000Hz</property>
+        </object>
+	</child>
+  </object>
+</interface>
