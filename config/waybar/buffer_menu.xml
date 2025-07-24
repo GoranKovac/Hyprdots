@@ -2,8 +2,8 @@
 <interface>
   <object class="GtkMenu" id="menu">
 	<child>
-		<object class="GtkMenuItem" id="Auto">
-			<property name="label">Auto</property>
+		<object class="GtkMenuItem" id="Auto Buffer">
+			<property name="label">Auto Buffer</property>
         </object>
 	</child>
 	<child>
