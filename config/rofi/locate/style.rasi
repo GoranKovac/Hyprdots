@@ -38,8 +38,8 @@ window {
     border-radius:               0px;
     cursor:                      "default";
     background-color:            @background;
-    border-color:                #8AB1CF;
-    border:  2px 2px 2px 2px;
+    border-color:                #34C6FD;
+    border:  4px 4px 4px 4px;
 }
 
 /*****----- Main Box -----*****/
