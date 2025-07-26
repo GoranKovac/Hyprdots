@@ -13,7 +13,7 @@
     "custom/screenrecorder",
     "tray",
     //"idle_inhibitor",
-    "jack",
+    // "jack",
     "pulseaudio",
     "custom/buffer",
     "network",
@@ -31,8 +31,8 @@
   "tray": {
     "spacing": 20,
   },
-  "jack": {
-    "format": "DSP",
-    "tooltip-format": "{samplerate} Hz\n{bufsize} Samples\n{latency} ms\n{xruns} xruns",
-  },
+  // "jack": {
+  //   "format": "DSP",
+  //   "tooltip-format": "{samplerate} Hz\n{bufsize} Samples\n{latency} ms\n{xruns} xruns",
+  // },
 }
