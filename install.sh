@@ -103,7 +103,7 @@ cp .vim ~/
 mkdir -p ~/Pictures/Wallpapers
 curl https://raw.githubusercontent.com/Larcele/8-bit-day/refs/heads/master/07-Early-Evening.png -o ~/Pictures/Wallpapers/8bitday.png
 
-sudo chmod +x ~/.config/waybar/waybar-screenrecorder/screenrecorder2
+sudo chmod +x ~/.config/waybar/waybar-screenrecorder/screenrecorder
 sudo chmod +x ~/.config/rofi/launcher/launcher.sh
 sudo chmod +x ~/.config/rofi/locate/rofi-locate.sh
 sudo chmod +x ~/.config/rofi/monitor_sel/monitor_sel.sh
