@@ -116,18 +116,18 @@ cd ..
 #Best font in universe
 paru -S ttf-fixedsys-excelsior-linux
 
-read -p "Install Steam, Reaper, Godot, Blender and other friends? " -n 1 -r
-echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-    ./apps.sh
-fi
-
 read -p "Install RME & ProAudio? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     ./rme.sh
+fi
+
+read -p "Install Steam, Reaper, Godot, Blender and other friends? " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    ./apps.sh
 fi
 
 read -p "Update to Base mkinitcpio for faster boot? " -n 1 -r
@@ -137,6 +137,3 @@ then
     sudo sed -i 's/^HOOKS=(.*)/HOOKS=(systemd autodetect microcode modconf block filesystems fsck)/' /etc/mkinitcpio.conf
     sudo mkinitcpio -p linux
 fi
-
-cd ..
-rm -r Hyprdots 
