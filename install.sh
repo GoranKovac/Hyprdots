@@ -129,3 +129,17 @@ cd ..
 
 #Best font in universe
 paru -S ttf-fixedsys-excelsior-linux
+
+read -p "Install Steam, Reaper, Godot, Blender and other friends? " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    ./apps.sh
+fi
+
+read -p "Install RME & ProAudio? " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    ./rme.sh
+fi
