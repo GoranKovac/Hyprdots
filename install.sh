@@ -117,8 +117,8 @@ sudo chmod +x ~/.config/hypr/scripts/hypr_gamemode.sh
 sudo chmod +x ~/.config/hypr/scripts/hpick.sh
 sudo chmod +x ~/.config/hypr/scripts/reaper_yb.sh
 
-sudo chmod +x apps.sh
-sudo chmod +x rme.sh
+# sudo chmod +x apps.sh
+# sudo chmod +x rme.sh
 
 #Install paru
 sudo pacman -S --needed base-devel
