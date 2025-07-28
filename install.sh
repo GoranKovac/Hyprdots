@@ -92,7 +92,7 @@ pkgs=(
     #better find for yazi
     fd
     #rip grep for yazi
-    rg
+    ripgrep
 )
 
 sudo pacman -S "${pkgs[@]}"
@@ -117,12 +117,12 @@ sudo chmod +x ~/.config/hypr/scripts/hypr_gamemode.sh
 sudo chmod +x ~/.config/hypr/scripts/hpick.sh
 sudo chmod +x ~/.config/hypr/scripts/reaper_yb.sh
 
-sudo chmod +x ~/.config/hypr/apps.sh
-sudo chmod +x ~/.config/hypr/rme.sh
+sudo chmod +x apps.sh
+sudo chmod +x rme.sh
 
 #Install paru
 sudo pacman -S --needed base-devel
-git clone https://aur.archlinux.org/paru.git
+sudo git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
 cd ..
