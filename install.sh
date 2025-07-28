@@ -106,23 +106,9 @@ cp .vim ~/
 mkdir -p ~/Pictures/Wallpapers
 curl https://raw.githubusercontent.com/Larcele/8-bit-day/refs/heads/master/07-Early-Evening.png -o ~/Pictures/Wallpapers/8bitday.png
 
-# sudo chmod +x ~/.config/waybar/waybar-screenrecorder/screenrecorder
-# sudo chmod +x ~/.config/rofi/launcher/launcher.sh
-# sudo chmod +x ~/.config/rofi/locate/rofi-locate.sh
-# sudo chmod +x ~/.config/rofi/monitor_sel/monitor_sel.sh
-# sudo chmod +x ~/.config/rofi/powermenu/powermenu.sh
-# sudo chmod +x ~/.config/rofi/run/run.sh
-# sudo chmod +x ~/.config/rofi/clipboard/clipboard.sh
-# sudo chmod +x ~/.config/hypr/scripts/hypr_gamemode.sh
-# sudo chmod +x ~/.config/hypr/scripts/hpick.sh
-# sudo chmod +x ~/.config/hypr/scripts/reaper_yb.sh
-
-# sudo chmod +x apps.sh
-# sudo chmod +x rme.sh
-
 #Install paru
 sudo pacman -S --needed base-devel
-sudo git clone https://aur.archlinux.org/paru.git
+git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
 cd ..
@@ -143,3 +129,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
     ./rme.sh
 fi
+
+cd ..
+rm -r Hyprdots 
