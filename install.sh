@@ -130,5 +130,13 @@ then
     ./rme.sh
 fi
 
+read -p "Update to Base mkinitcpio for faster boot? " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    sudo sed -i 's/^HOOKS=(.*)/HOOKS=(systemd autodetect microcode modconf block filesystems fsck)/' /etc/mkinitcpio.conf
+    sudo mkinitcpio -p linux
+fi
+
 cd ..
 rm -r Hyprdots 
