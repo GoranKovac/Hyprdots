@@ -84,6 +84,7 @@ pkgs=(
     #General
     firefox
     discord
+    steam
 
     #TUI file manager
     yazi
@@ -93,11 +94,17 @@ pkgs=(
     fd
     #rip grep for yazi
     ripgrep
+
+    #For Audio
+    realtime-privileges
+    #Node Audio Patchbay
+    qpwgraph
 )
 
 sudo pacman -S "${pkgs[@]}"
 
 sudo usermod -aG gamemode $USER
+sudo usermod -aG realtime $USER
 
 cp -aT config ~/.config
 cp .vimrc ~/
@@ -113,14 +120,14 @@ cd ..
 #Best font in universe
 paru -S ttf-fixedsys-excelsior-linux
 
-read -p "Install RME & ProAudio? " -n 1 -r
+read -p "Install RME & Firewire fix? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     ./rme.sh
 fi
 
-read -p "Install Steam, Reaper, Godot, Blender and other friends? " -n 1 -r
+read -p "Install Reaper, ReaPack, Godot, Blender, Zed, Zig, Zls? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then

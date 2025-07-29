@@ -1,8 +1,8 @@
 #!/bin/bash
 
 pkgs=(
-    steam
     zed
+    zig
     zls
     godot
     blender
