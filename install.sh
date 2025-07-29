@@ -103,9 +103,6 @@ cp -aT config ~/.config
 cp .vimrc ~/
 cp .vim ~/
 
-mkdir -p ~/Pictures/Wallpapers
-curl https://raw.githubusercontent.com/Larcele/8-bit-day/refs/heads/master/07-Early-Evening.png -o ~/Pictures/Wallpapers/8bitday.png
-
 #Install paru
 sudo pacman -S --needed base-devel
 git clone https://aur.archlinux.org/paru.git
@@ -130,7 +127,7 @@ then
     ./apps.sh
 fi
 
-read -p "Update to Base mkinitcpio for faster boot? " -n 1 -r
+read -p "Update to Base MKINITCPIO for faster boot? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
