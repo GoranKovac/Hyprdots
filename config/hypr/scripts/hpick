@@ -1,5 +1,8 @@
 #!/bin/bash
-
+pgrep hyprpicker >/dev/null 2>&1 && killall hyprpicker ||
 color=$(hyprpicker -a)
+
+if [ ! -z $color ]; then
 wl-copy $color
 notify-send "Color Picked" "<span color='$color'>$color</span>"
+fi
