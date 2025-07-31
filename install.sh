@@ -138,7 +138,7 @@ read -p "Update to Base MKINITCPIO for faster boot? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    sudo sed -i 's/^HOOKS=(.*)/HOOKS=(systemd autodetect microcode modconf block filesystems fsck)/' /etc/mkinitcpio.conf
+    sudo sed -i 's/^HOOKS=(.*)/HOOKS=(base udev microcode modconf block filesystems fsck)/' /etc/mkinitcpio.conf
     sudo mkinitcpio -p linux
 fi
 
