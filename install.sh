@@ -58,10 +58,10 @@ pkgs=(
     nautilus
 
     #Nautilus NEEDED FOR WINDOWS NETWORK DISCOVERY (DEFINITELY)
-    gvfs-wsdd
+    #gvfs-wsdd
 
     #Nautilus NEEDED FOR WINDOWS NETWORK DISCOVERY (MAYBE!!!)
-    gvfs-smb
+    #gvfs-smb
 
     #Gamemode Daemon
     gamemode
@@ -141,3 +141,30 @@ then
     sudo sed -i 's/^HOOKS=(.*)/HOOKS=(systemd autodetect microcode modconf block filesystems fsck)/' /etc/mkinitcpio.conf
     sudo mkinitcpio -p linux
 fi
+
+echo 'pacmaninstall () {
+#pacman -Sl | awk \'{print $2($4=="" ? "" : " *INSTALLED")}\' | fzf --multi --preview \'pacman -Si {1}\' | cut -d " " -f 1 | xargs -ro sudo pacman -S
+pacman -Sl | awk \'{print $2($4=="" ? "" : " *INSTALLED")}\' | fzf --border-label=" INSTALL PACKAGES " --border --multi --preview \'Items> \' \\
+--header \'CTRL-F: Toggle Selected LIST, [TAB]: multi-select\' \\
+--preview-label \' Package INFO \' \\
+--preview \'pacman -Si {1}\' \\
+--bind \'ctrl-f:transform:[[ $(</tmp/state) -eq 0 ]] &&
+echo "execute-silent(echo 1 > /tmp/state)+change-preview-label( Selected Packages )+change-preview:cat \\{+f}" ||
+echo "execute-silent(echo 0 > /tmp/state)+change-preview-label( Package )+change-preview:pacman -Si \\{1}"\' \\
+| cut -d " " -f 1 | xargs -ro sudo pacman -S
+}
+
+pacmanremove () {
+#pacman -Qqe | fzf --multi --preview \'pacman -Qi {1}\' | xargs -ro sudo pacman -Rns
+pacman -Qqe | fzf --border-label=" REMOVE PACKAGES " --border --multi --preview \'Items> \' \\
+--header \'CTRL-F: Toggle Selected LIST, [TAB]: multi-select\' \\
+--preview-label \' Package INFO \' \\
+--preview \'pacman -Qi {1}\' \\
+--bind \'ctrl-f:transform:[[ $(</tmp/state) -eq 0 ]] &&
+echo "execute-silent(echo 1 > /tmp/state)+change-preview-label( Selected Packages )+change-preview:cat \\{+f}" ||
+echo "execute-silent(echo 0 > /tmp/state)+change-preview-label( Package )+change-preview:pacman -Qi \\{1}"\' \\
+| xargs -ro sudo pacman -Rns
+}
+
+alias pinstall="pacmaninstall"
+alias premove="pacmanremove"' >> .bashrc
