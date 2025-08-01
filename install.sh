@@ -111,14 +111,14 @@ cp .vimrc ~/
 cp .vim ~/
 
 #Install paru
-sudo pacman -S --needed base-devel
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si
-cd ..
+# sudo pacman -S --needed base-devel
+# git clone https://aur.archlinux.org/paru.git
+# cd paru
+# makepkg -si
+# cd ..
 
-#Best font in universe
-paru -S ttf-fixedsys-excelsior-linux
+# #Best font in universe
+# paru -S ttf-fixedsys-excelsior-linux
 
 read -p "Install RME & Firewire fix? " -n 1 -r
 echo    # (optional) move to a new line
