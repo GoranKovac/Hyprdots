@@ -1,3 +1,4 @@
+--needs configuring to RME INPUT
 context.modules = [
     {   name = libpipewire-module-loopback
         args = {
