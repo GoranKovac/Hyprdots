@@ -110,6 +110,7 @@ sudo usermod -aG gamemode $USER
 sudo usermod -aG realtime $USER
 
 cp -aT config ~/.config
+cp -aT Templates ~/Templates
 cp .vimrc ~/
 cp .vim ~/
 
