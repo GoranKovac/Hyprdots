@@ -99,6 +99,9 @@ pkgs=(
     realtime-privileges
     #Node Audio Patchbay
     qpwgraph
+
+    #Image viewer
+    imv
 )
 
 sudo pacman -S "${pkgs[@]}"

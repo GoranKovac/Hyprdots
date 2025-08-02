@@ -2,7 +2,9 @@
 application/json=dev.zed.Zed.desktop
 inode/directory=org.gnome.Nautilus.desktop
 application/x-shellscript=dev.zed.Zed.desktop
+image/png=imv-dir.desktop
 
 [Added Associations]
 application/json=dev.zed.Zed.desktop;
 application/x-shellscript=dev.zed.Zed.desktop;
+image/png=imv-dir.desktop;
