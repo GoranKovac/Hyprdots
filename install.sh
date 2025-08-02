@@ -74,10 +74,11 @@ pkgs=(
     vlc
     vlc-plugins-all
 
-    #Process, Gpu monitor
+    #Process, Gpu monitor, network
     htop
     nvtop
-    #Cpu temperature lib
+    iftop
+    #Cpu temperature lib (to show up in htop)
     lm_sensors
 
     #Disk usage analyser
