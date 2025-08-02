@@ -77,6 +77,8 @@ pkgs=(
     #Process, Gpu monitor
     htop
     nvtop
+    #Cpu temperature lib
+    lm_sensors
 
     #Disk usage analyser
     ncdu
