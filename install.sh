@@ -111,7 +111,7 @@ sudo pacman -S "${pkgs[@]}"
 
 sudo usermod -aG gamemode $USER
 sudo usermod -aG realtime $USER
-
+cp -aT /usr/share/fonts/TTF FixedSysEx
 cp -aT config ~/.config
 cp -aT Templates ~/Templates
 cp .vimrc ~/
