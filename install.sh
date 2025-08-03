@@ -77,7 +77,7 @@ pkgs=(
     #Process, Gpu monitor, network
     htop
     nvtop
-    iftop
+
     #Cpu temperature lib (to show up in htop)
     lm_sensors
 

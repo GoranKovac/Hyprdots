@@ -42,7 +42,7 @@
   "project_panel": {
     "dock": "left"
   },
-  "buffer_font_family": "Fixedsys Excelsior",
+  "buffer_font_family": "FixedSysEx",
   "buffer_font_size": 16,
   "theme": {
     "mode": "system",
