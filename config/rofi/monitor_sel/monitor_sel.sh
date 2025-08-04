@@ -23,6 +23,7 @@ gamemode='GameMode'
 gamemode_off='GameMode Off'
 restart_waybar='Restart Waybar'
 all='All'
+roli='Connect Roli BT'
 # lock='Lock'
 # suspend='Suspend'
 # logout='Logout'
@@ -45,7 +46,7 @@ rofi_cmd() {
 
 # Pass variables to rofi dmenu
 run_rofi() {
-    echo -e "$all\n$primary\n$gamemode\n$gamemode_off\n$restart_waybar" | rofi_cmd
+    echo -e "$all\n$primary\n$gamemode\n$gamemode_off\n$roli\n$restart_waybar" | rofi_cmd
 }
 
 # Execute Command
@@ -86,6 +87,11 @@ run_cmd() {
        elif [[ $1 == '--restart_waybar' ]]; then
            killall waybar && hyprctl dispatch exec waybar
            notify-send "Waybar Restarted"
+       elif [[ $1 == '--roli' ]]; then
+           bluetoothctl trust 48:B6:20:0A:5A:59
+           bluetoothctl disconnect 48:B6:20:0A:5A:59
+           bluetoothctl connect 48:B6:20:0A:5A:59
+           notify-send "Roli BT Connected"
 	fi
 }
 

@@ -151,6 +151,13 @@ then
     sudo mkinitcpio -p linux
 fi
 
+read -p "Install Bluetooth for Roli? " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    ./roli_bt.sh
+fi
+
 echo 'pacmaninstall () {
 #pacman -Sl | awk \'{print $2($4=="" ? "" : " *INSTALLED")}\' | fzf --multi --preview \'pacman -Si {1}\' | cut -d " " -f 1 | xargs -ro sudo pacman -S
 pacman -Sl | awk \'{print $2($4=="" ? "" : " *INSTALLED")}\' | fzf --border-label=" INSTALL PACKAGES " --border --multi --preview \'Items> \' \\
