@@ -17,6 +17,7 @@ parupkgs=(
     blockbench-bin
     ldtk-bin
     pixi-editor
+    davinci-resolve
 )
 
 sudo pacman -S "${pkgs[@]}"
