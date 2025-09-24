@@ -15,7 +15,7 @@ parupkgs=(
     aseprite
     armorpaint
     blockbench-bin
-    ldtk-bin
+    #ldtk-bin
     pixi-editor
     davinci-resolve
 )
