@@ -125,6 +125,7 @@ git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
 cd ..
+sudo rm -r paru/
 
 # #Best font in universe
 # paru -S ttf-fixedsys-excelsior-linux

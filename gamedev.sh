@@ -7,7 +7,7 @@ pkgs=(
     reapack
     # deluxe paint
     grafx2
-
+    krita
 )
 
 parupkgs=(
