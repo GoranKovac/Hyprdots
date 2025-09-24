@@ -120,30 +120,37 @@ cp .vimrc ~/
 cp .vim ~/
 
 #Install paru
-# sudo pacman -S --needed base-devel
-# git clone https://aur.archlinux.org/paru.git
-# cd paru
-# makepkg -si
-# cd ..
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+cd ..
 
 # #Best font in universe
 # paru -S ttf-fixedsys-excelsior-linux
 
-read -p "Install RME & Firewire fix? " -n 1 -r
+read -p "Install RME & Firewire fix? " -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     ./rme.sh
 fi
 
-read -p "Install Reaper, ReaPack, Godot, Blender, Zed, Zig, Zls? " -n 1 -r
+read -p "Install GameDev Apps? " -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    ./gamedev.sh
+fi
+
+read -p "Install Reaper, ReaPack, Blender, Zed, Zig, Zls? " -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     ./apps.sh
 fi
 
-read -p "Update to Base MKINITCPIO for faster boot? " -n 1 -r
+read -p "Update to Base MKINITCPIO for faster boot? " -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
@@ -151,7 +158,7 @@ then
     sudo mkinitcpio -p linux
 fi
 
-read -p "Install Bluetooth for Roli? " -n 1 -r
+read -p "Install Bluetooth for Roli? " -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
