@@ -20,4 +20,4 @@ parupkgs=(
 )
 
 sudo pacman -S "${pkgs[@]}"
-sudo paru -S "${parupkgs[@]}"
+paru -S "${parupkgs[@]}"
