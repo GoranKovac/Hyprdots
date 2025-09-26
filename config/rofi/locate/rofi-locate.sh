@@ -23,6 +23,6 @@ theme='style'
 
 #locate / | rofi -use-hot-keys -threads 0 -width 100 -dmenu -i -p -theme ${dir}/${theme}.rasi "locate" | xargs -r xdg-open
 
-fd --type f . / -H -u | rofi -width 100 -dmenu -i -p FILES -theme ${dir}/${theme}.rasi | xargs -r nautilus #xdg-open
+fd --type f . / -H -u | rofi -width 100 -dmenu -i -p FILES -theme ${dir}/${theme}.rasi | sed "s/^/'/;s/$/'/" | xargs -r nautilus #xdg-open
 
 # fd --type f pdf . $HOME | rofi -keep-right -dmenu -i -p FILES -multi-select | xargs -I {} xdg-open {}
