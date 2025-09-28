@@ -12,11 +12,11 @@ pkgs=(
 
 parupkgs=(
     material-maker-bin
-    aseprite
+    #aseprite #on steam
     armorpaint
     blockbench-bin
     #ldtk-bin
-    pixi-editor
+    #pixi-editor #on steam
     davinci-resolve
 )
 
