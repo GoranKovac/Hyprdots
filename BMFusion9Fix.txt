@@ -1,0 +1,4 @@
+Fix Fusion9 startup errors for some plugins:
+
+paru -S execstack
+sudo execstack -c /opt/BlackmagicDesign/Fusion9/Frameworks/lib/libopencv_*
