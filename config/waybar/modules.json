@@ -3,7 +3,7 @@
     "format": "󰣇",
     "tooltip": true,
     "tooltip-format": "btw",
-    "on-click": "pgrep rofi >/dev/null 2>&1 && killall rofi || rofi -show drun -show-icons -theme launchpad"
+    "on-click": "~/.config/rofi/system/system.sh"
   },
 
   "hyprland/workspaces": {
@@ -131,7 +131,8 @@
     "menu-actions": {
       "shutdown": "systemctl poweroff",
       "reboot": "systemctl reboot",
-      "logout": "loginctl kill-user $(whoami)"
+      "logout": "loginctl kill-user $(whoami)",
+      "bios": "systemctl reboot --firmware-setup"
     }
   },
 

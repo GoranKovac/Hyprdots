@@ -20,7 +20,7 @@ uptime="`uptime -p | sed -e 's/up //g' | sed -e 's/hour/hr/g' | sed -e 's/minute
 # hibernate='Hibernate'
 poweroff='Poweroff'
 reboot='Reboot'
-# lock='Lock'
+bios='Bios'
 # suspend='Suspend'
 logout='Logout'
 
@@ -34,7 +34,7 @@ rofi_cmd() {
 
 # Pass variables to rofi dmenu
 run_rofi() {
-	echo -e "$poweroff\n$reboot\n$logout" | rofi_cmd
+    echo -e "$poweroff\n$reboot\n$logout\n$bios" | rofi_cmd
 }
 
 # Execute Command
@@ -45,6 +45,8 @@ run_cmd() {
 		systemctl reboot
 	elif [[ $1 == '--logout' ]]; then
 	    loginctl kill-user $(whoami)
+	elif [[ $1 == '--bios' ]]; then
+    	systemctl reboot --firmware-setup
 	fi
 }
 
@@ -59,5 +61,8 @@ case ${chosen} in
         ;;
     $logout)
 		run_cmd --logout
+        ;;
+    $bios)
+		run_cmd --bios
         ;;
 esac

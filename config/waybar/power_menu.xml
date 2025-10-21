@@ -16,5 +16,10 @@
 			<property name="label">Logout</property>
 		</object>
     </child>
+    <child>
+		<object class="GtkMenuItem" id="bios">
+			<property name="label">Bios</property>
+		</object>
+    </child>
   </object>
 </interface>
