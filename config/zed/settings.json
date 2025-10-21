@@ -46,8 +46,8 @@
   "ui_font_family": "Consoleet Fixedsys 1T",
   "ui_font_features": {},
   "ui_font_size": 13.7142857143,
-  "buffer_font_family": "Consoleet Fixedsys 1T",
-  "buffer_font_size": 12,
+  "buffer_font_family": "Consoleet Fixedsys",
+  "buffer_font_size": 16,
   "theme": {
     "mode": "system",
     "light": "Catppuccin Macchiato",
