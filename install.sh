@@ -113,6 +113,7 @@ sudo usermod -aG gamemode $USER
 sudo usermod -aG realtime $USER
 
 sudo cp -aT FixedSysEx /usr/share/fonts/TTF
+# https://inai.de/projects/consoleet/
 sudo cp -aT ConsoleetSysFX /usr/share/fonts/TTF
 
 cp -aT config ~/.config
