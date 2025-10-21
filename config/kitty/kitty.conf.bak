@@ -3,11 +3,11 @@
 # -----------------------------------------------------
 
 # Font
-# font_family      JetBrainsMono Nerd Font
-# bold_font        JetBrainsMono NF Bold
-# italic_font      JetBrainsMono NF Italic
-# bold_italic_font JetBrainsMono NF Medium Italic
-font_size 9
+font_family      JetBrainsMono Nerd Font
+bold_font        JetBrainsMono NF Bold
+italic_font      JetBrainsMono NF Italic
+bold_italic_font JetBrainsMono NF Medium Italic
+font_size 11
 modify_font cell_height 118%
 
 # Theme
@@ -56,11 +56,3 @@ shell fish
 
 # Keybindings
 # kitty_mod ctrl
-
-
-# BEGIN_KITTY_FONTS
-font_family      family="Consoleet Fixedsys 1T"
-bold_font        auto
-italic_font      auto
-bold_italic_font auto
-# END_KITTY_FONTS
