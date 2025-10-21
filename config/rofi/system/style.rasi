@@ -2,13 +2,14 @@
 configuration {
     show-icons: false;
     hover-select:		true;
+    drun-display-format: "{icon} {name}";
     me-select-entry: "";
 	me-accept-entry: [MousePrimary];
 }
 
 /*****----- Global Properties -----*****/
 * {
-    font: "JetBrainsMono Nerd Font Mono 12";
+    font: "JetBrainsMono Nerd Font 12";
     background: #11111b;
     foreground: #cdd6f4;
     selected: #8AB1CF;
@@ -65,7 +66,7 @@ prompt {
 listview {
     enabled: true;
     columns: 1;
-    lines: 2;
+    lines: 10;
     cycle: true;
     dynamic: true;
     scrollbar: false;

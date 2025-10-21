@@ -78,7 +78,7 @@ pkgs=(
     htop
     nvtop
 
-    #Cpu temperature lib (to show up in htop)
+    #Cpu temperature lib (to show copy up in htop)
     lm_sensors
 
     #Disk usage analyser
