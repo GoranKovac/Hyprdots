@@ -109,6 +109,9 @@ pkgs=(
 
     #Image viewer
     imv
+
+    #torrent client
+    transmission-gtk
 )
 
 sudo pacman -S "${pkgs[@]}"
