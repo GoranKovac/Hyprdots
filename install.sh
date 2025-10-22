@@ -77,6 +77,8 @@ pkgs=(
     #Process, Gpu monitor, network
     htop
     nvtop
+    iftop
+    systemctl-tui
 
     #Cpu temperature lib (to show copy up in htop)
     lm_sensors
