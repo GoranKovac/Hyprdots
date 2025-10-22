@@ -79,6 +79,8 @@ pkgs=(
     nvtop
     iftop
     systemctl-tui
+    nethogs
+    iotop
 
     #Cpu temperature lib (to show copy up in htop)
     lm_sensors

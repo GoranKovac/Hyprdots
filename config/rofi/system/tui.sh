@@ -16,7 +16,7 @@ show_dmesg() {
 
 show_tui() {
     # TUI_APP=$(echo -e "󰒍 YAZI (File Manager)\n󰅬 NCDU (Disk Usage Analyzer)\n󰒋 HTOP (Process Viewer)\n󰙨 IFTOP (Network Bandwidth)" | rofi -dmenu -i -p -theme ${dir}/${theme}.rasi "TUI Apps")
-    TUI_APP=$(echo -e "󰒋 HTOP (Process Viewer)\n󰙨 IFTOP (Network Bandwidth)\n NVTOP (GPU)\n󰅬 NCDU (Disk Usage Analyzer)\n󰒍 YAZI (File Manager)\n󰒍 SYSTEMCTL (Systemd services)\n JOURNALCTL (System log)\n DMESG (Boot log)" | rofi -dmenu -i -p -theme ${dir}/${theme}.rasi "TUI Apps")
+    TUI_APP=$(echo -e "󰒋 HTOP (Process Viewer)\n󰙨 IFTOP (Network Bandwidth)\n󰙨 NETHOGS (Network Usage APP)\n NVTOP (GPU)\n IOTOP (Disk Monitor)\n󰅬 NCDU (Disk Usage Analyzer)\n󰒍 YAZI (File Manager)\n󰒍 SYSTEMCTL (Systemd services)\n JOURNALCTL (System log)\n DMESG (Boot log)" | rofi -dmenu -i -p -theme ${dir}/${theme}.rasi "TUI Apps")
 
     case "$TUI_APP" in
         *"HTOP"*)
@@ -58,9 +58,23 @@ show_tui() {
         if command -v systemctl-tui >/dev/null 2>&1; then
             $TERMINAL -e systemctl-tui
         else
-            notify-send "TUI Apps" "systemctl-tui not installed\nInstall: suro pacman -S systemctl-tui"
+            notify-send "TUI Apps" "systemctl-tui not installed\nInstall: sudo pacman -S systemctl-tui"
         fi
         ;;
+        *"IOTOP"*)
+                if command -v iotop >/dev/null 2>&1; then
+                    $TERMINAL -e iotop
+                else
+                    notify-send "TUI Apps" "iotop not installed\nInstall: sudo pacman -S iotop"
+                fi
+                ;;
+        *"NETHOGS"*)
+               if command -v nethogs >/dev/null 2>&1; then
+                   $TERMINAL -e nethogs
+               else
+                   notify-send "TUI Apps" "nethogs not installed\nInstall: sudo pacman -S nethogs"
+               fi
+               ;;
         *"JOURNALCTL"*)
         show_journalctl
         ;;
