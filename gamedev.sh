@@ -3,8 +3,8 @@
 pkgs=(
     godot
     blender
-    reaper
-    reapack
+    # reaper
+    # reapack
     # deluxe paint
     grafx2
     krita
@@ -17,7 +17,7 @@ parupkgs=(
     blockbench-bin
     #ldtk-bin
     #pixi-editor #on steam
-    davinci-resolve
+    # davinci-resolve
 )
 
 sudo pacman -S "${pkgs[@]}"

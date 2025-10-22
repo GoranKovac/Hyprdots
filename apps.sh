@@ -4,8 +4,6 @@ pkgs=(
     zed
     zig
     zls
-    # godot
-    blender
     reaper
     reapack
 )
