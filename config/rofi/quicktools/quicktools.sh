@@ -15,6 +15,7 @@ all='All Monitors'
 install='Install'
 remove='Remove'
 update='Update'
+tui='TUI'
 # roli='Connect Roli BT'
 
 # Rofi CMD
@@ -35,7 +36,7 @@ rofi_cmd() {
 
 # Pass variables to rofi dmenu
 run_rofi() {
-    echo -e "$all\n$primary\n$gamemode\n$gamemode_off\n$install\n$remove\n$update\n$restart_waybar" | rofi_cmd
+    echo -e "$all\n$primary\n$gamemode\n$gamemode_off\n$install\n$remove\n$update\n$tui\n$restart_waybar" | rofi_cmd
 }
 
 show_install() {
@@ -49,6 +50,10 @@ show_install() {
                 kitty -e bash -c "$HOME/.config/hypr/scripts/paruinstall.sh"
                 ;;
     esac
+}
+
+show_tui() {
+    ~/.config/rofi/system/tui.sh
 }
 
 show_update() {
@@ -145,5 +150,8 @@ case ${chosen} in
     ;;
     $update)
     run_cmd --update
+    ;;
+    $tui)
+    show_tui
     ;;
 esac
