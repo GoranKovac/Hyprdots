@@ -4,7 +4,7 @@
 dir="$HOME/.config/rofi/system"
 theme='style'
 
-TERMINAL="kitty"
+TERMINAL='kitty --class=SYS'
 
 show_journalctl() {
     # ~/.config/hypr/scripts/journalctlfzf.sh

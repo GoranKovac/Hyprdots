@@ -7,7 +7,7 @@ theme='style'
 # CMDs
 uptime="`uptime -p | sed -e 's/up //g' | sed -e 's/hour/hr/g' | sed -e 's/minute/min/g'`"
 
-TERMINAL="kitty"
+TERMINAL='kitty --class=SYS'
 
 apps='󰀻 Apps'
 install='󰏔 Install'
@@ -37,7 +37,6 @@ run_rofi() {
 run_cmd() {
 	if [[ $1 == '--install' ]]; then
 	show_install
-	    # kitty -e "$HOME/.config/hypr/scripts/install.sh"
 	elif [[ $1 == '--remove' ]]; then
         $TERMINAL -e "$HOME/.config/hypr/scripts/remove.sh"
 	elif [[ $1 == '--update' ]]; then
@@ -76,13 +75,7 @@ show_monitor_sel() {
 show_poweroff() {
     ~/.config/rofi/powermenu/powermenu.sh
 }
-show_journalctl() {
-    # ~/.config/hypr/scripts/journalctlfzf.sh
-    $TERMINAL -e "$HOME/.config/hypr/scripts/journalctlfzf.sh"
-}
-show_dmesg() {
-     $TERMINAL -e bash -c "echo sudo dmesg; $HOME/.config/hypr/scripts/dmesgfzf.sh"
-}
+
 show_tui() {
     ~/.config/rofi/system/tui.sh
 }
