@@ -63,7 +63,7 @@ show_tui() {
         ;;
         *"IOTOP"*)
                 if command -v iotop >/dev/null 2>&1; then
-                    $TERMINAL -e iotop
+                    $TERMINAL -e sudo iotop
                 else
                     notify-send "TUI Apps" "iotop not installed\nInstall: sudo pacman -S iotop"
                 fi
