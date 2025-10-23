@@ -7,6 +7,6 @@ pacmanremove () {
     --bind 'ctrl-f:transform:[[ $(</tmp/state) -eq 0 ]] &&
     echo "execute-silent(echo 1 > /tmp/state)+change-preview-label( Selected Packages )+change-preview:cat \{+f}" ||
     echo "execute-silent(echo 0 > /tmp/state)+change-preview-label( Package )+change-preview:pacman -Qi \{1}"' \
-    | xargs -ro sudo pacman -Rns
+    | xargs -tro sudo pacman -Rns
 }
 pacmanremove
