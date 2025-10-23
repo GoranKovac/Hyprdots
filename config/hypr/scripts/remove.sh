@@ -10,3 +10,4 @@ pacmanremove () {
     | xargs -tro sudo pacman -Rns
 }
 pacmanremove
+read -p 'Press enter to close...'
