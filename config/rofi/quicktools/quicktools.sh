@@ -63,7 +63,7 @@ show_addremove() {
             show_install
             ;;
             *"Remove")
-            $TERMINAL -e "$HOME/.config/hypr/scripts/remove.sh"
+            $TERMINAL -e bash -c "$HOME/.config/hypr/scripts/remove.sh; read -p 'Press enter to close...'"
             ;;
     esac
 }
