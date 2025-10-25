@@ -18,8 +18,11 @@ pkgs=(
     #CLI editor
     vim
 
-    #Needed for audio control
+    #pulse audio controller
     pavucontrol
+
+    #Pipewire audio control (like pavucontrol)
+    wiremix
 
     #usb auto mount
     udiskie
@@ -33,11 +36,14 @@ pkgs=(
     #Screenshot tool
     hyprshot
 
+    #Screenshot annotation
+    satty
+
     #status bar
     waybar
 
     #launcher
-    rofi-wayland
+    rofi
 
     #screen recorder
     wf-recorder
@@ -140,41 +146,36 @@ sudo rm -r paru/
 # paru -S ttf-fixedsys-excelsior-linux
 
 read -p "Install RME & Firewire fix? " -r
-echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
+echo # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]; then
     ./rme.sh
 fi
 
 read -p "Install GameDev Apps? " -r
-echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
+echo # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]; then
     ./gamedev.sh
 fi
 
 read -p "Install Reaper, ReaPack, Blender, Zed, Zig, Zls? " -r
-echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
+echo # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]; then
     ./apps.sh
 fi
 
 read -p "Update to Base MKINITCPIO for faster boot? " -r
-echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
+echo # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]; then
     sudo sed -i 's/^HOOKS=(.*)/HOOKS=(base udev microcode modconf block filesystems fsck)/' /etc/mkinitcpio.conf
     sudo mkinitcpio -p linux
 fi
 
 read -p "Install Bluetooth for Roli? " -r
-echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
+echo # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]; then
     ./roli_bt.sh
 fi
 
 echo '
 alias pinstall=". $HOME/.config/hypr/scripts/install.sh"
-alias premove=". $HOME/.config/hypr/scripts/remove.sh"' >> .bashrc
+alias premove=". $HOME/.config/hypr/scripts/remove.sh"' >>.bashrc
