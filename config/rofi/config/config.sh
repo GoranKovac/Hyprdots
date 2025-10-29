@@ -11,13 +11,13 @@ show_update() {
 
     case "$MANAGER" in
     *"Hyprland"*)
-        $TERMINAL -e bash -c "nvim ~/.config/hypr"
+        $TERMINAL -o confirm_os_window_close=0 -e bash -c "nvim ~/.config/hypr"
         ;;
     *"Waybar")
-        $TERMINAL -e bash -c "nvim ~/.config/waybar"
+        $TERMINAL -o confirm_os_window_close=0 -e bash -c "nvim ~/.config/waybar"
         ;;
     *"Rofi")
-        $TERMINAL -e bash -c "nvim ~/.config/rofi"
+        $TERMINAL -o confirm_os_window_close=0 -e bash -c "nvim ~/.config/rofi"
         ;;
     esac
 }
