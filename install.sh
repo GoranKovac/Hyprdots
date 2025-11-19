@@ -19,7 +19,7 @@ pkgs=(
     vim
 
     #pulse audio controller
-    pavucontrol
+    #pavucontrol
 
     #Pipewire audio control (like pavucontrol)
     wiremix
