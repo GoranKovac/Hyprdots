@@ -13,3 +13,18 @@ vim.keymap.set("n", "n", "nzz")
 vim.keymap.set("n", "N", "Nzz")
 
 vim.keymap.set("n", "<S-3>", "Nzz")
+
+vim.keymap.set({ "n", "x", "o" }, "]z", function()
+    require("nvim-treesitter-textobjects.move").goto_next_start("@conditional.outer")
+end, { desc = "Next IF" })
+
+vim.keymap.set({ "n", "x", "o" }, "[z", function()
+    require("nvim-treesitter-textobjects.move").goto_previous_start("@conditional.outer")
+end, { desc = "Prev IF" })
+
+vim.keymap.set({ "n", "x", "o" }, "]Z", function()
+    require("nvim-treesitter-textobjects.move").goto_next_start("@loop.outer")
+end, { desc = "Next FOR / WHILE" })
+vim.keymap.set({ "n", "x", "o" }, "[Z", function()
+    require("nvim-treesitter-textobjects.move").goto_previous_start("@loop.outer")
+end, { desc = "Prev FOR / WHILE" })
