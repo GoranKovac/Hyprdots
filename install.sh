@@ -18,6 +18,9 @@ pkgs=(
     #CLI editor
     vim
 
+    #CLI editor
+    neovim
+
     #pulse audio controller
     #pavucontrol
 
