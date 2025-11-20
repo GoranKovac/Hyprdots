@@ -19,7 +19,7 @@ all='All Monitors'
 
 # Rofi CMD
 rofi_cmd() {
-    fuzzel --dmenu -p "Monitors "
+    fuzzel --dmenu -p "Monitors > "
 }
 
 # Confirmation CMD

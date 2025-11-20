@@ -18,7 +18,7 @@ config='Config'
 
 # Rofi CMD
 rofi_cmd() {
-    fuzzel --dmenu -p "QuickTools : "
+    fuzzel --dmenu -p "QuickTools > "
 }
 
 # Confirmation CMD

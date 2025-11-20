@@ -23,7 +23,7 @@ gamemode_off='GameMode Off'
 
 # Rofi CMD
 rofi_cmd() {
-    fuzzel --dmenu -p "HyprGameMode "
+    fuzzel --dmenu -p "HyprGameMode > "
 }
 
 # Confirmation CMD

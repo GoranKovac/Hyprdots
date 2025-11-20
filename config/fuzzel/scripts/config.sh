@@ -3,7 +3,7 @@
 TERMINAL='foot -a NVIM'
 
 show_update() {
-    MANAGER=$(echo -e "Hyprland\nWaybar\nFuzzel" | fuzzel --dmenu -i -p "Config ")
+    MANAGER=$(echo -e "Hyprland\nWaybar\nFuzzel" | fuzzel --dmenu -i -p "Config > ")
 
     case "$MANAGER" in
     *"Hyprland"*)
