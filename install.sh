@@ -10,7 +10,10 @@ pkgs=(
     xdg-desktop-portal-gtk
 
     #Default hyprland terminal
-    kitty
+    # kitty
+
+    #Small fast terminal
+    foot
 
     #Shell with autocomplete etc
     fish
