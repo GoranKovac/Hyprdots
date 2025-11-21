@@ -49,7 +49,8 @@ pkgs=(
     waybar
 
     #launcher
-    rofi
+    # rofi
+    fuzzel
 
     #screen recorder
     wf-recorder
@@ -107,15 +108,19 @@ pkgs=(
 
     #TUI file manager
     yazi
+
     #fuzzy search for yazi
     fzf
+
     #better find for yazi
     fd
+
     #rip grep for yazi
     ripgrep
 
     #For Audio
     realtime-privileges
+
     #Node Audio Patchbay
     qpwgraph
 
