@@ -11,6 +11,7 @@ find='󰍉 Find'
 gamemode='  HyperGameMode'
 monitor_sel='  Monitor Select'
 waybar_reset='  Waybar Restart'
+config=' Config'
 turnoff=' PowerOff'
 
 # Rofi CMD
@@ -20,7 +21,7 @@ rofi_cmd() {
 
 # Pass variables to rofi dmenu
 run_rofi() {
-    echo -e "$apps\n$install\n$remove\n$find\n$sysupdate\n$tools\n$gamemode\n$monitor_sel\n$waybar_reset\n$turnoff" | rofi_cmd
+    echo -e "$apps\n$install\n$remove\n$find\n$sysupdate\n$tools\n$gamemode\n$monitor_sel\n$waybar_reset\n$config\n$turnoff" | rofi_cmd
 }
 
 # Execute Command
@@ -44,6 +45,9 @@ run_cmd() {
     elif [[ $1 == '--poweroff' ]]; then
         show_poweroff
     fi
+}
+show_config() {
+    ~/.config/fuzzel/scripts/config.sh
 }
 
 show_apps() {
@@ -132,5 +136,8 @@ $waybar_reset)
     ;;
 $turnoff)
     run_cmd --poweroff
+    ;;
+$config)
+    show_config
     ;;
 esac
