@@ -145,6 +145,8 @@ cp -aT Templates ~/Templates
 cp .vimrc ~/
 cp .vim ~/
 
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal foot
+
 #Install paru
 sudo pacman -S --needed base-devel
 git clone https://aur.archlinux.org/paru.git
