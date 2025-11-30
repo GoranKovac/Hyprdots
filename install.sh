@@ -155,6 +155,12 @@ sudo rm -r paru/
 
 # #Best font in universe
 # paru -S ttf-fixedsys-excelsior-linux
+read -p "Update to Base MKINITCPIO for faster boot? " -r
+echo # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    sudo sed -i 's/^HOOKS=(.*)/HOOKS=(base udev microcode modconf block filesystems fsck)/' /etc/mkinitcpio.conf
+    sudo mkinitcpio -p linux
+fi
 
 read -p "Install RME & Firewire fix? " -r
 echo # (optional) move to a new line
@@ -172,13 +178,6 @@ read -p "Install Reaper, ReaPack, Blender, Zed, Zig, Zls? " -r
 echo # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     ./apps.sh
-fi
-
-read -p "Update to Base MKINITCPIO for faster boot? " -r
-echo # (optional) move to a new line
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-    sudo sed -i 's/^HOOKS=(.*)/HOOKS=(base udev microcode modconf block filesystems fsck)/' /etc/mkinitcpio.conf
-    sudo mkinitcpio -p linux
 fi
 
 read -p "Install Bluetooth for Roli? " -r
