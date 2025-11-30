@@ -133,11 +133,6 @@ pkgs=(
 
 sudo pacman -S "${pkgs[@]}"
 
-#Install Hyprplugins (hyprexpo for overview)
-hyprpm update
-hyprpm add https://github.com/hyprwm/hyprland-plugins
-hyprpm enable hyprexpo
-
 sudo usermod -aG gamemode $USER
 sudo usermod -aG realtime $USER
 
