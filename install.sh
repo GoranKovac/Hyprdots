@@ -145,8 +145,6 @@ cp -aT Templates ~/Templates
 cp .vimrc ~/
 cp .vim ~/
 
-gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal foot
-
 #Install paru
 sudo pacman -S --needed base-devel
 git clone https://aur.archlinux.org/paru.git
@@ -154,6 +152,9 @@ cd paru
 makepkg -si
 cd ..
 sudo rm -r paru/
+
+paru -S nautilus-open-any-terminal
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal foot
 
 # #Best font in universe
 # paru -S ttf-fixedsys-excelsior-linux
