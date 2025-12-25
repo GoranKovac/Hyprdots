@@ -70,6 +70,9 @@ pkgs=(
     #file manager
     nautilus
 
+    #image mounting
+    gnome-disk-utility
+
     #Nautilus NEEDED FOR WINDOWS NETWORK DISCOVERY (DEFINITELY)
     #gvfs-wsdd
 
