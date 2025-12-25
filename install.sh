@@ -174,16 +174,16 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     ./rme.sh
 fi
 
+read -p "Install Reaper, ReaPack, Zed, Zig, Zls? " -r
+echo # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    ./apps.sh
+fi
+
 read -p "Install GameDev Apps? " -r
 echo # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     ./gamedev.sh
-fi
-
-read -p "Install Reaper, ReaPack, Blender, Zed, Zig, Zls? " -r
-echo # (optional) move to a new line
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-    ./apps.sh
 fi
 
 read -p "Install Bluetooth for Roli? " -r
