@@ -168,6 +168,12 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     sudo mkinitcpio -p linux
 fi
 
+read -p "Install WIFI? " -r
+echo # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    sudo pacman -S iwd impala
+fi
+
 read -p "Install RME & Firewire fix? " -r
 echo # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]; then
