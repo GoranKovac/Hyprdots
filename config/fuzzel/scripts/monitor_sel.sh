@@ -44,7 +44,7 @@ run_cmd() {
         notify-send "PRIMARY ONLY"
     elif [[ $1 == '--all' ]]; then
         hyprctl keyword monitor DP-3,1920x1080@144.00,0x0,1
-        hyprctl keyword monitor HDMI-A-1,848x480@60,4480x0,1
+        hyprctl keyword monitor HDMI-A-1,1920x1080@120,4480x0,1
         notify-send "ALL MONITORS"
     fi
 }

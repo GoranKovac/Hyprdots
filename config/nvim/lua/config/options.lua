@@ -8,3 +8,4 @@ vim.g.snacks_animate = false
 vim.opt.swapfile = false
 vim.opt.scrolloff = 15
 vim.g.lazyvim_rust_diagnostics = "rust-analyzer"
+vim.g.autoformat = false
