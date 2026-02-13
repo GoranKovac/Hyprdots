@@ -1,0 +1,189 @@
+{
+    "layer": "bottom",
+    "output": "DP-2",
+    "position": "bottom",
+    "mod": "dock",
+    "exclusive": true,
+    "gtk-layer-shell": true,
+    "margin-bottom": -1,
+    "passthrough": false,
+    "height": 36,
+    "modules-left": [
+        "custom/os_button",
+        //"hyprland/workspaces",
+        "wlr/taskbar"
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "custom/screenrecorder",
+        //"cpu",
+        //"temperature",
+        //"memory",
+        //"disk",
+        "hyprland/workspaces",
+        "tray",
+        "pulseaudio",
+        "network",
+        //"battery",
+        //"hyprland/language",
+        "clock"
+    ],
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "ENG",
+        "format-ru": "РУС"
+    },
+    "hyprland/workspaces": {
+        "all-outputs": true,
+        "show-special": true,
+        "icon-size": 32,
+        "spacing": 16,
+    },
+    "custom/os_button": {
+        "format": "󰣇",
+        "on-click": "~/.config/fuzzel/scripts/system.sh",
+        "tooltip": false,
+        "menu": "on-click-right",
+        "menu-file": "~/.config/waybar/context.xml",
+        "menu-actions": {
+            "Task Manager": "~/.config/hypr/scripts/htop.sh",
+        }
+    },
+    "cpu": {
+        "interval": 5,
+        "format": "  {usage}%",
+        "max-length": 10
+    },
+    "temperature": {
+        "hwmon-path-abs": "/sys/devices/platform/coretemp.0/hwmon",
+        "input-filename": "temp2_input",
+        "critical-threshold": 75,
+        "tooltip": false,
+        "format-critical": "({temperatureC}°C)",
+        "format": "({temperatureC}°C)"
+    },
+    "disk": {
+        "interval": 30,
+        "format": "󰋊 {percentage_used}%",
+        "path": "/",
+        "tooltip": true,
+        "unit": "GB",
+        "tooltip-format":  "Available {free} of {total}"
+    },
+    "memory": {
+        "interval": 10,
+        "format": "  {percentage}%",
+        "max-length": 10,
+        "tooltip": true,
+        "tooltip-format": "RAM - {used:0.1f}GiB used"
+    },
+    "wlr/taskbar": {
+        "all-outputs": true,
+        //"format": "{icon} {title:.17}",
+        "format": "{icon}",
+        "icon-size": 28,
+        "spacing": 3,
+        "on-click-middle": "close",
+        "tooltip-format": "{title}",
+        "ignore-list": ["discord", "steam"],
+        "on-click": "activate"
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 0
+    },
+    "clock": {
+        "format": "      {:%R\n %d.%m.%Y}",
+        "tooltip-format": "<span font='Fira Sans Semibold 12'><big>{:%d %B}</big>\n<tt><small>{calendar}</small></tt></span>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "format": {
+                "today": "<span color='#88bbff'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click": "mode"
+        },
+    },
+    "network": {
+        "format-wifi": "{icon}",
+        "format-ethernet": "",
+        "format-disconnected": "󰌙",
+        "format-icons": [
+            "󰤯 ",
+            "󰤟 ",
+            "󰤢 ",
+            "󰤢 ",
+            "󰤨 "
+        ],
+        "tooltip-format": "{ifname} {ipaddr}",
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": [
+            "󰂎",
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ]
+    },
+    "pulseaudio": {
+        "max-volume": 150,
+        "scroll-step": 10,
+        "format": "{icon}",
+        "tooltip-format": "{volume}%",
+        "format-muted": "󰖁",
+        "format-icons": {
+            "default": [
+                "󰕿",
+                "󰖀",
+                "󰕾"
+            ]
+        },
+        "on-click": "/home/gokily/.config/hypr/scripts/wiremix.sh",
+        "menu": "on-click-right",
+        "menu-file": "~/.config/waybar/buffer_menu.xml",
+        "menu-actions": {
+            "Auto Buffer": "pw-metadata -n settings 0 clock.force-quantum 0",
+            "32": "pw-metadata -n settings 0 clock.force-quantum 32",
+            "64": "pw-metadata -n settings 0 clock.force-quantum 64",
+            "128": "pw-metadata -n settings 0 clock.force-quantum 128",
+            "256": "pw-metadata -n settings 0 clock.force-quantum 256",
+            "512": "pw-metadata -n settings 0 clock.force-quantum 512",
+            "1024": "pw-metadata -n settings 0 clock.force-quantum 1024",
+            "2048": "pw-metadata -n settings 0 clock.force-quantum 2048",
+            "4096": "pw-metadata -n settings 0 clock.force-quantum 4096",
+            "8192": "pw-metadata -n settings 0 clock.force-quantum 8192",
+            "Auto SR": "pw-metadata -n settings 0 clock.force-rate 0",
+            "44100": "pw-metadata -n settings 0 clock.force-rate 44100",
+            "48000": "pw-metadata -n settings 0 clock.force-rate 48000",
+            "96000": "pw-metadata -n settings 0 clock.force-rate 96000"
+        }
+
+    },
+    "custom/screenrecorder": {
+        "format": " ● ",
+        "exec": "echo ● ",
+        "interval": 1,
+        "tooltip": "false",
+        "exec-if": "pgrep wf-recorder",
+        "on-click": "$HOME/.config/hypr/scripts/screenrecorder",
+        "signal": 8
+    }
+}
