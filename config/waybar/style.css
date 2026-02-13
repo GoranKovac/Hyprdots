@@ -61,6 +61,7 @@ tooltip label{
   font-size: 100px;
   font-weight: 900;
   padding-right: 18px;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 #workspaces button {
@@ -70,7 +71,6 @@ tooltip label{
   margin-top: 4px;
   margin-bottom: 4px;
   transition: none;
-
 }
 #workspaces button.active {
 	color: black;
@@ -139,7 +139,7 @@ tooltip label{
 }
 
 #tray{
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  /* border-left: 1px solid rgba(255, 255, 255, 0.3); */
   margin: 0;
 }
 #tray > .passive {
