@@ -65,7 +65,7 @@ pkgs=(
     dunst
 
     #remembering logins (git etc)
-    gnome-keyring
+    # gnome-keyring
 
     #file manager
     nautilus
