@@ -157,7 +157,7 @@ makepkg -si
 cd ..
 sudo rm -r paru/
 
-paru -S nautilus-open-any-terminal
+paru -S nautilus-open-any-terminal brave-bin
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal foot
 
 # #Best font in universe
