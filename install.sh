@@ -66,6 +66,7 @@ pkgs=(
 
     #remembering logins (git etc)
     # gnome-keyring
+    libsecret
 
     #file manager
     nautilus
