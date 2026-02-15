@@ -106,7 +106,7 @@ pkgs=(
     ncdu
 
     #General
-    firefox
+    # firefox
     discord
     steam
 
