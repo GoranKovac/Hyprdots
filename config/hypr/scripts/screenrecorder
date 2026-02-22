@@ -6,24 +6,29 @@ if [ -z $(pgrep wf-recorder) ] ; then
     if [ -z $(pgrep slurp) ]; then
         rect="$(slurp)"
         if [ $? -eq 0 ]; then
-          notify-send 'Recording started'
-          wf-recorder -f $HOME/Videos/$filename -g "$rect"
-          pkill -RTMIN+8 waybar
+            notify-send 'Recording started'
+            wf-recorder -f $HOME/Videos/$filename -g "$rect"
+            pkill -RTMIN+8 waybar
         fi
-    	# notify-send "Recording Started"
-     #    wf-recorder -f $HOME/Videos/$filename -g "$(slurp)" >/dev/null 2>&1 &
-    	# sleep 2
-    	# while [ ! -z $(pgrep -x slurp) ]; do wait; done
-    	# pkill -RTMIN+8 waybar
+        # notify-send "Recording Started"
+        #    wf-recorder -f $HOME/Videos/$filename -g "$(slurp)" >/dev/null 2>&1 &
+        # sleep 2
+        # while [ ! -z $(pgrep -x slurp) ]; do wait; done
+        # pkill -RTMIN+8 waybar
     else
-    	killall -s SIGINT slurp
+        killall -s SIGINT slurp
     fi
 else
-	killall -s SIGINT wf-recorder
-	notify-send "Recording Complete" "(Videos/$filename)"
-	# action=$(notify-send --action=open='Show' "Recording Complete" "(Videos/$filename)")
-	while [ ! -z $(pgrep -x wf-recorder) ]; do wait; done
-	pkill -RTMIN+8 waybar
+    killall -s SIGINT wf-recorder
+    latest="$(find "$HOME/Videos" -type f -printf '%T@ %p\n' | sort -nr | head -n1 | cut -d' ' -f2-)"
+    # notify-send "Recording Complete" "(Videos/$filename)"
+    action=$(notify-send --action=open=Show "Recording Complete" "$(basename "$latest")")
+    # action=$(notify-send --action=open='Show' "Recording Complete" "(Videos/$filename)")
+    while [ ! -z $(pgrep -x wf-recorder) ]; do wait; done
+    pkill -RTMIN+8 waybar
+    if [[ "$action" == "open" ]]; then
+        xdg-open "$HOME/Videos"
+    fi
     # if [[ $action == "open" ]]; then
     #     nautilus ~/Videos/
     #     pkill -RTMIN+8 waybar

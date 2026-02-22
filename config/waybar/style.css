@@ -1,6 +1,6 @@
 
 /*base background color*/
-@define-color bg_main rgba(25, 25, 25, 0.90);
+@define-color bg_main rgba(29, 29, 41, 0.8);
 @define-color bg_main_tooltip rgba(0, 0, 0, 0.7);
 
 /*base background color of selections */
@@ -213,7 +213,7 @@ tooltip label{
 menu {
     font-weight: 600;
     padding: 0;
-    background: rgba(43, 43, 43, 1);
+    background: rgba(45, 46, 49, 1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: @content_main;
 }
