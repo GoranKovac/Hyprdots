@@ -16,7 +16,7 @@ turnoff=' PowerOff'
 
 # Rofi CMD
 rofi_cmd() {
-    fuzzel --dmenu -p "Main Menu > "
+    fuzzel -a bottom-left --dmenu -p "Main Menu > "
 }
 
 # Pass variables to rofi dmenu

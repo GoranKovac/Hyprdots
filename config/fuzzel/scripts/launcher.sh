@@ -2,6 +2,6 @@
 
 ## Run
 pgrep fuzzel >/dev/null 2>&1 && killall fuzzel ||
-    fuzzel
+    fuzzel -a bottom-left
 [-d | --dmenu]
 
