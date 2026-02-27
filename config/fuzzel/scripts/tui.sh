@@ -13,7 +13,7 @@ show_dmesg() {
 
 show_tui() {
     # TUI_APP=$(echo -e "󰒍 YAZI (File Manager)\n󰅬 NCDU (Disk Usage Analyzer)\n󰒋 HTOP (Process Viewer)\n󰙨 IFTOP (Network Bandwidth)" | rofi -dmenu -i -p -theme ${dir}/${theme}.rasi "TUI Apps")
-    TUI_APP=$(echo -e "󰒋 HTOP (Process Viewer)\n󰙨 IFTOP (Network Bandwidth)\n󰙨 NETHOGS (Network Usage APP)\n NVTOP (GPU)\n IOTOP (Disk Monitor)\n󰅬 NCDU (Disk Usage Analyzer)\n󰒍 YAZI (File Manager)\n󰒍 SYSTEMCTL (Systemd services)\n JOURNALCTL (System log)\n DMESG (Boot log)" | fuzzel --dmenu -i -p "TUI Apps > ")
+    TUI_APP=$(echo -e "󰒋 HTOP (Process Viewer)\n󰙨 IFTOP (Network Bandwidth)\n󰙨 NETHOGS (Network Usage APP)\n NVTOP (GPU)\n󰋊 IOTOP (Disk Monitor)\n󰅬 NCDU (Disk Usage Analyzer)\n󰒍 YAZI (File Manager)\n󰒍 SYSTEMCTL (Systemd services)\n JOURNALCTL (System log)\n DMESG (Boot log)" | fuzzel --dmenu -i -p "TUI Apps > ")
 
     case "$TUI_APP" in
     *"HTOP"*)

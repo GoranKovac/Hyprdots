@@ -3,17 +3,17 @@
 TERMINAL='foot -a SYS'
 
 # CMDs
-monitors='Monitors'
-gamemode='GameMode'
+monitors='󰍺 Monitors'
+gamemode='󰊗 GameMode'
 # gamemode_off='GameMode Off'
-restart_waybar='Restart Waybar'
+restart_waybar='󱄌 Restart Waybar'
 # all='All Monitors'
 # install='Install'
 # remove='Remove'
-update='Update System'
-tui='TUI Tools'
-addremove='Install/Remove App'
-config='Config'
+update='󰚰 Update System'
+tui='󱂬 TUI Tools'
+addremove='󰏔 Install/Remove App'
+config=' Config'
 # roli='Connect Roli BT'
 
 # Rofi CMD

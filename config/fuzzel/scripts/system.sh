@@ -8,10 +8,11 @@ remove='󰆴 Remove'
 sysupdate='󰚰 System Update'
 tools='󱂬 TUI Tools'
 find='󰍉 Find'
-gamemode='  HyperGameMode'
-monitor_sel='  Monitor Select'
-waybar_reset='  Waybar Restart'
-config=' Config'
+gamemode='󰊗 HyperGameMode'
+monitor_sel='󰍺 Monitor Select'
+waybar_reset='󱄌 Waybar Restart'
+config=' Config'
+task=' Task Manager'
 turnoff=' PowerOff'
 
 # Rofi CMD
@@ -21,7 +22,7 @@ rofi_cmd() {
 
 # Pass variables to rofi dmenu
 run_rofi() {
-    echo -e "$apps\n$install\n$remove\n$find\n$sysupdate\n$tools\n$gamemode\n$monitor_sel\n$waybar_reset\n$config\n$turnoff" | rofi_cmd
+    echo -e "$apps\n$install\n$remove\n$find\n$sysupdate\n$tools\n$gamemode\n$monitor_sel\n$waybar_reset\n$config\n$task\n$turnoff" | rofi_cmd
 }
 
 # Execute Command
@@ -34,6 +35,8 @@ run_cmd() {
         show_update
     elif [[ $1 == '--tools' ]]; then
         show_tui
+    elif [[ $1 == '--task' ]]; then
+        show_task
     elif [[ $1 == '--apps' ]]; then
         show_apps
     elif [[ $1 == '--find' ]]; then
@@ -72,6 +75,10 @@ show_poweroff() {
 
 show_tui() {
     ~/.config/fuzzel/scripts/tui.sh
+}
+
+show_task() {
+    ~/.config/fuzzel/scripts/htop.sh
 }
 
 # Update menu - ENHANCED
@@ -136,6 +143,9 @@ $waybar_reset)
     ;;
 $turnoff)
     run_cmd --poweroff
+    ;;
+$task)
+    run_cmd --task
     ;;
 $config)
     show_config
