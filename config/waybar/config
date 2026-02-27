@@ -41,13 +41,13 @@
     },
     "custom/os_button": {
         "format": "󰣇",
-        "on-click": "~/.config/fuzzel/scripts/system.sh",
+        "on-click": "~/.config/fuzzel/scripts/launcher.sh",
         "tooltip": false,
-        "menu": "on-click-right",
-        "menu-file": "~/.config/waybar/context.xml",
-        "menu-actions": {
-            "Task Manager": "~/.config/hypr/scripts/htop.sh",
-        }
+        "on-click-right": "~/.config/fuzzel/scripts/system.sh",
+        //"menu-file": "~/.config/waybar/context.xml",
+        //"menu-actions": {
+        //    "Task Manager": "~/.config/hypr/scripts/htop.sh",
+        //}
     },
     "cpu": {
         "interval": 5,
