@@ -81,7 +81,7 @@
         "all-outputs": true,
         //"format": "{icon} {title:.17}",
         "format": "{icon}",
-        "icon-size": 28,
+        "icon-size": 24,
         "spacing": 3,
         "on-click-middle": "close",
         "tooltip-format": "{title}",
