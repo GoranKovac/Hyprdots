@@ -1,5 +1,5 @@
 [global]
-    monitor = 3
+    monitor = DP-2
     follow = none
     width = 300
     height = 130
@@ -20,10 +20,10 @@
     progress_bar_min_width = 150
     progress_bar_max_width = 300
     separator_height = 2
-    frame_width = 1
-    frame_color = "#4F6089"
+    frame_width = 2
+    frame_color = "#34C7FB"
     separator_color = "frame"
-    corner_radius = 8
+    corner_radius = 0
     transparency = 0
     gap_size = 8
     line_height = 0
@@ -55,13 +55,13 @@
 
 
 [urgency_low]
-    background = "#0c0f10"
+    background = "#24273ACC"
     foreground = "#cdd6f4"
     highlight = "#cba6f7"
     timeout = 4
 
 [urgency_normal]
-    background = "#0c0f10"
+    background = "#24273ACC"
     foreground = "#cdd6f4"
     highlight = "#cba6f7"
     timeout = 6
