@@ -88,8 +88,9 @@ pkgs=(
     ttf-font-awesome
 
     #MP and Codecs
-    vlc
-    vlc-plugins-all
+    mpv
+    # vlc
+    # vlc-plugins-all
 
     #Process, Gpu monitor, network
     htop
@@ -111,7 +112,8 @@ pkgs=(
     steam
 
     #TUI file manager
-    yazi
+    # yazi
+    superfile
 
     #fuzzy search for yazi
     fzf
