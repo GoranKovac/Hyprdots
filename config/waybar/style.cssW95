@@ -1,0 +1,316 @@
+/*base background color*/
+@define-color bg_main rgba(36,39,58, 0.8);
+@define-color bg_main_tooltip rgba(0, 0, 0, 0.7);
+/*base background color of selections */
+@define-color bg_hover rgba(200, 200, 200, 0.3);
+/*base background color of active elements */
+@define-color bg_active rgba(100, 100, 100, 0.5);
+/*base border color*/
+@define-color border_main rgba(255, 255, 255, 0.2);
+/*text color for entries, views and content in general */
+@define-color content_main white;
+/*text color for entries that are unselected */
+@define-color content_inactive rgba(255, 255, 255, 0.25);
+@define-color content_inactive2 rgba(255, 255, 255, 0.80);
+
+/* ============================================
+   WINDOWS 95 TASKBAR THEME FOR WAYBAR
+   ============================================
+   Color palette:
+     Win95 gray:        #c2c2c2
+     Dark shadow:       #9c9c9c
+     Darker shadow:     #404040
+     Light highlight:   #ffffff
+     Window title bg:   #000080
+     Text:              #000000
+   ============================================ */
+
+* {
+	text-shadow: none;
+  border: none;
+  border-radius: 0;
+	font-family: "MS Sans Serif", "Segoe UI", "Ubuntu";
+  font-size: 12px;
+  color: #000000;
+  font-weight: normal;
+  min-height: 0;
+  min-width: 0;
+}
+
+window#waybar {
+  /* Win95 classic gray, solid — no transparency */
+  background: #c2c2c2;
+  border-top: 2px solid #ffffff;
+}
+
+/* ---- Tooltips ---- */
+tooltip {
+  background: #c2c2c2;
+  border-radius: 0;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ffffff #9c9c9c #9c9c9c #ffffff;
+}
+tooltip label {
+}
+
+/* ---- Start / OS button ---- */
+#custom-os_button {
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 6px;
+  padding-right: 8px;
+  margin: 4px 4px 4px 2px;
+  background: #c2c2c2;
+  color: #000000;
+  /* Raised 3D border: light top-left, dark bottom-right */
+  border-top:    2px solid #ffffff;
+  border-left:   2px solid #ffffff;
+  border-bottom: 2px solid #404040;
+  border-right:  2px solid #404040;
+  /* Inner bevel */
+  /* Using box-shadow workaround for inner border */
+  /* (waybar does support box-shadow in some builds) */
+}
+#custom-os_button:hover {
+  background: #c2c2c2;
+  color: #000000;
+}
+#custom-os_button:active {
+  /* Pressed: borders flip */
+  border-top:    2px solid #404040;
+  border-left:   2px solid #404040;
+  border-bottom: 2px solid #ffffff;
+  border-right:  2px solid #ffffff;
+  padding: 3px 7px 1px 7px;
+}
+
+/* ---- Workspaces ---- */
+#workspaces {
+	margin-right: 4px;
+	margin-left: 2px;
+  transition: none;
+  padding-right: 4px;
+  border-right: 2px solid #9c9c9c;
+}
+#workspaces button {
+  padding: 2px 6px;
+  background: #c2c2c2;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 1px;
+  margin-right: 1px;
+  transition: none;
+  /* Raised 3D */
+  border-top:    2px solid #ffffff;
+  border-left:   2px solid #ffffff;
+  border-bottom: 2px solid #404040;
+  border-right:  2px solid #404040;
+}
+#workspaces button.active {
+  /* Pressed / active = sunken */
+  background: #c2c2c2;
+  border-top:    2px solid #404040;
+  border-left:   2px solid #404040;
+  border-bottom: 2px solid #ffffff;
+  border-right:  2px solid #ffffff;
+  /* Slight inset padding shift for "pressed" feel */
+  padding: 3px 5px 1px 7px;
+}
+#workspaces button.focused {
+  color: #000000;
+}
+#workspaces button.urgent {
+  background: #c2c2c2;
+  border-top:    2px solid #404040;
+  border-left:   2px solid #404040;
+  border-bottom: 2px solid #ffffff;
+  border-right:  2px solid #ffffff;
+  color: #ff0000;
+}
+#workspaces button:not(.active):hover {
+  background: #d0d0d0;
+  color: #000000;
+}
+
+/* ---- Taskbar buttons ---- */
+#taskbar {
+}
+#taskbar button {
+  min-width: 130px;
+  /* Outer bevel */
+  border-top:    1px solid #ffffff;
+  border-left:   1px solid #ffffff;
+  border-bottom: 1px solid #000000;
+  border-right:  1px solid #000000;
+  /* Inner bevel via box-shadow */
+  box-shadow: inset -1px -1px 0 #7f7f7f, inset 1px 1px 0 #dedede;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  font-weight: bold;
+  background: #c2c2c2;
+  transition: none;
+}
+#taskbar button.active {
+  /* Pressed / active window = sunken */
+  border-top:    1px solid #000000;
+  border-left:   1px solid #000000;
+  border-bottom: 1px solid #ffffff;
+  border-right:  1px solid #ffffff;
+  box-shadow: inset -1px -1px 0 #c2c2c2, inset 1px 1px 0 #818181;
+  background: #ededed;
+  padding: 4px 6px;
+}
+#taskbar button:not(.active):hover {
+  border-top:    1px solid #ffffff;
+  border-left:   1px solid #ffffff;
+  border-bottom: 1px solid #000000;
+  border-right:  1px solid #000000;
+  box-shadow: inset -1px -1px 0 #7f7f7f, inset 1px 1px 0 #dedede;
+  background: #d0d0d0;
+}
+
+/* ---- System tray area — sunken well ---- */
+#tray {
+  /* Left edge of unified sunken tray area */
+  border-top:    2px solid #9c9c9c;
+  border-left:   2px solid #9c9c9c;
+  border-bottom: 2px solid #ffffff;
+  border-right:  none;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-left: 4px;
+  margin-right: 0;
+  padding: 0;
+}
+#tray > .passive {
+  border-bottom: none;
+}
+#tray > .needs-attention {
+  /* Blinking-style highlight */
+  background: #ffff00;
+}
+#tray > widget {
+  background: transparent;
+}
+#tray > widget:hover {
+  background: #d0d0d0;
+}
+#tray image {
+  padding: 0 6px;
+}
+
+/* ---- Clock — right edge of unified sunken tray area ---- */
+#clock {
+  padding: 0 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-left: 0;
+  margin-right: 4px;
+  background: #c2c2c2;
+  border-top:    2px solid #9c9c9c;
+  border-left:   none;
+  border-bottom: 2px solid #ffffff;
+  border-right:  2px solid #ffffff;
+}
+#clock:hover {
+  background: #c2c2c2;
+}
+
+/* ---- Audio ---- */
+#pulseaudio {
+  min-width: 0;
+  font-size: 15px;
+  padding: 0 8px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-left: 0;
+  margin-right: 0;
+  border-top:    2px solid #9c9c9c;
+  border-left:   none;
+  border-bottom: 2px solid #ffffff;
+  border-right:  none;
+}
+#pulseaudio:hover {
+  background: #d0d0d0;
+}
+
+/* ---- Network ---- */
+#network {
+  font-size: 15px;
+  padding: 0 8px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-left: 0;
+  margin-right: 0;
+  border-top:    2px solid #9c9c9c;
+  border-left:   none;
+  border-bottom: 2px solid #ffffff;
+  border-right:  none;
+}
+#network:hover {
+  background: #d0d0d0;
+}
+
+/* ---- CPU / Disk / Memory ---- */
+#cpu, #disk, #memory {
+  padding: 3px 6px;
+}
+
+/* ---- Temperature ---- */
+#temperature {
+  color: transparent;
+  font-size: 0px;
+}
+#temperature.critical {
+  padding-right: 3px;
+  color: #ff0000;
+  font-size: initial;
+  border-bottom: 2px dashed #ff0000;
+}
+
+/* ---- Window title ---- */
+#window {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* ---- Language ---- */
+#language {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* ---- Screen recorder ---- */
+#custom-screenrecorder {
+  font-size: 12px;
+  color: #ff0000;
+  padding: 0 4px;
+  margin: 0;
+  border-bottom: 2px solid #ff0000;
+}
+
+/* ---- Context menus — Win95 style ---- */
+menu {
+  padding: 2px;
+  background: #c2c2c2;
+  border-top:    2px solid #ffffff;
+  border-left:   2px solid #ffffff;
+  border-bottom: 2px solid #404040;
+  border-right:  2px solid #404040;
+  color: #000000;
+}
+menuitem {
+  padding: 2px 20px;
+}
+menuitem:hover {
+  background: #000080;
+  color: #ffffff;
+}

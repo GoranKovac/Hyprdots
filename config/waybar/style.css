@@ -93,6 +93,14 @@ tooltip label{
 	color: @content_main;
 }
 
+#workspaces .taskbar-window {
+    /* background: @bg_hover; */
+    border-top: 1px solid transparent;
+    font-weight: normal;
+    /* padding-left: 1px; */
+    padding-right: 2px;
+}
+
 #taskbar {
 }
 

@@ -5,7 +5,7 @@
     "mod": "dock",
     "exclusive": true,
     "gtk-layer-shell": true,
-    "margin-bottom": -1,
+    "margin-bottom": 0,
     "passthrough": false,
     "height": 36,
     "modules-left": [
@@ -33,11 +33,24 @@
         "format-en": "ENG",
         "format-ru": "РУС"
     },
+    //"hyprland/workspaces": {
+    //    "all-outputs": true,
+    //    "show-special": true,
+    //    "icon-size": 32,
+    //    "spacing": 16,
+    //},
     "hyprland/workspaces": {
         "all-outputs": true,
         "show-special": true,
-        "icon-size": 32,
-        "spacing": 16,
+        "format": "{icon} {windows}",
+        "format-window-separator": "",
+        "workspace-taskbar": {
+            "enable": true,
+            "update-active-window": true,
+            "format": "{icon}",
+            "icon-size": 18,
+            "on-click-window": "${SCRIPTS}/focus-window.sh {address} {button}"
+        }
     },
     "custom/os_button": {
         "format": "󰣇",
@@ -78,7 +91,7 @@
         "tooltip-format": "RAM - {used:0.1f}GiB used"
     },
     "wlr/taskbar": {
-        "all-outputs": true,
+        "all-outputs": false,
         //"format": "{icon} {title:.17}",
         "format": "{icon}",
         "icon-size": 24,
