@@ -89,6 +89,7 @@ pkgs=(
 
     #MP and Codecs
     mpv
+    celluloid
     # vlc
     # vlc-plugins-all
 
@@ -113,7 +114,7 @@ pkgs=(
 
     #TUI file manager
     # yazi
-    superfile
+    # superfile
 
     #fuzzy search for yazi
     fzf
