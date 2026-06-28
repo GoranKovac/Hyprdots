@@ -1,7 +1,6 @@
 #!/bin/bash
 
 pkgs=(
-    zed
     zig
     zls
     reaper

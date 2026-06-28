@@ -81,7 +81,7 @@ pkgs=(
     #gvfs-smb
 
     #Gamemode Daemon
-    gamemode
+    # gamemode
 
     #Fonts for waybar etc
     noto-fonts
@@ -117,13 +117,13 @@ pkgs=(
     # superfile
 
     #fuzzy search for yazi
-    fzf
+    # fzf
 
     #better find for yazi
-    fd
+    # fd
 
     #rip grep for yazi
-    ripgrep
+    # ripgrep
 
     #For Audio
     realtime-privileges
