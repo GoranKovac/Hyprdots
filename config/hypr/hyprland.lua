@@ -22,13 +22,12 @@ hl.config({
 })
 
 
-
 -- Environment variables
 hl.env("XCURSOR_SIZE",                "24")
 hl.env("HYPRCURSOR_SIZE",             "24")
 hl.env("EDITOR",                      "vim")
 hl.env("FZF_DEFAULT_COMMAND",         "fd --type f -H")
-hl.env("ELECTRON_OZONE_PLATFORM_HINT","wayland")
+-- hl.env("ELECTRON_OZONE_PLATFORM_HINT","wayland")
 hl.env("PULSE_LATENCY_MSEC",          "30")
 
 -- Input

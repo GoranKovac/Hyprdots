@@ -14,7 +14,7 @@ hl.workspace_rule({ workspace = "10", monitor = "DP-2" })
 
 -- Special workspaces
 hl.workspace_rule({ workspace = "special:TERM", on_created_empty = "foot" })
-hl.workspace_rule({ workspace = "SYS" })
+-- hl.workspace_rule({ workspace = "SYS" })
 
 -- Suppress maximize requests from all apps
 hl.window_rule({
@@ -50,19 +50,16 @@ hl.window_rule({ name = "wr-tearing", immediate = true, match = { workspace = "1
 
 -- App → workspace assignments
 hl.window_rule({ name = "wr-discord", workspace = 7, match = { class = "discord" } })
-hl.window_rule({
-    name = "wr-reaper",
-    workspace = 3,
-    match = { class = "REAPER" },
-    render_unfocused = true,
-})
+hl.window_rule({ name = "wr-reaper-x11", workspace = 3, match = { class = "REAPER" }, render_unfocused = true, })
+
+hl.window_rule({ name = "wr-reaper-wl", workspace = 3, match = { class = "reaper" }, render_unfocused = true, no_anim = true, })
 hl.window_rule({ name = "wr-godot", workspace = 5, match = { class = "Godot" } })
 hl.window_rule({ name = "wr-firefox", workspace = 1, match = { class = "firefox" } })
-hl.window_rule({ name = "wr-nautilus", workspace = 2, match = { class = "org.gnome.Nautilus" } })
+-- hl.window_rule({ name = "wr-nautilus", workspace = 2, match = { class = "org.gnome.Nautilus" } })
 hl.window_rule({ name = "wr-fusion", workspace = 8, match = { class = "Fusion" } })
-hl.window_rule({ name = "wr-zed", workspace = 4, match = { class = "dev.zed.Zed" } })
+-- hl.window_rule({ name = "wr-zed", workspace = 4, match = { class = "dev.zed.Zed" } })
 hl.window_rule({ name = "wr-steam-ws", workspace = 10, match = { class = "steam" } })
-hl.window_rule({ name = "wr-mpv", workspace = 6, match = { class = "mpv" } })
+-- hl.window_rule({ name = "wr-mpv", workspace = 6, match = { class = "mpv" } })
 hl.window_rule({ name = "wr-fmod-ws", workspace = 6, match = { class = "^fmodstudio$" } })
 
 -- gcr-prompter (keyring)
@@ -70,8 +67,8 @@ hl.window_rule({ name = "wr-fmod-ws", workspace = 6, match = { class = "^fmodstu
 -- hl.window_rule({ name = "wr-gcr-focus",  stay_focused = true, match = { class = "gcr-prompter" } })
 
 -- Steam: float main window and all popups (two separate rules, no negative match)
-hl.window_rule({ name = "wr-steam-main", float = true, match = { class = "steam", title = "^Steam$" } })
-hl.window_rule({ name = "wr-steam-popups", float = true, match = { class = "steam", title = "negative:^Steam$" } })
+hl.window_rule({ name = "wr-steam-main", float = true, center = true, match = { class = "steam", title = "^Steam$" } })
+hl.window_rule({ name = "wr-steam-popups", float = true, center = true, match = { class = "steam", title = "negative:^Steam$" } })
 
 -- Float misc apps
 hl.window_rule({

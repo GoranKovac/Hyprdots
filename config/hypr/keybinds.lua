@@ -18,8 +18,7 @@ hl.config({ binds = { scroll_event_delay = 100 } })
 
 -- Apps
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("wayscriber --active"))
---hl.bind(mainMod .. " + C",         hl.dsp.exec_cmd(apps.cp))
-hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("foot -a CLIPSE clipse"))
+hl.bind(mainMod .. " + C",         hl.dsp.exec_cmd(apps.cp))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(apps.record))
 hl.bind(mainMod .. " + F12", hl.dsp.exec_cmd(apps.quicktools))
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.exec_cmd(apps.locate))
@@ -40,7 +39,8 @@ hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(apps.hpick))
 -- Window management
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + CTRL + F", hl.dsp.window.fullscreen(1))
+hl.bind(mainMod .. " + RETURN", hl.dsp.window.fullscreen(1))
+hl.bind(mainMod .. " + M", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 
 -- Move focus
@@ -57,7 +57,7 @@ hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.swap({ direction = "d" }))
 
 -- Special workspaces
 hl.bind(mainMod .. " + grave", hl.dsp.workspace.toggle_special("TERM"))
-hl.bind(mainMod .. " + RETURN", hl.dsp.workspace.toggle_special("SYS"))
+-- hl.bind(mainMod .. " + RETURN", hl.dsp.workspace.toggle_special("SYS"))
 
 -- Switch / move to workspaces [1-10]
 for i = 1, 10 do
