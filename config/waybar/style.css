@@ -232,3 +232,16 @@ menuitem:hover {
     background:  @bg_hover;
     /* color: black; */
 }
+
+/* waybar 0.16: workspace-taskbar window entries gained default GTK
+   padding/min-height and grew the bar when windows opened */
+#workspaces button,
+#workspaces .taskbar-window,
+#workspaces .taskbar-window * {
+  min-height: 0;
+}
+#workspaces .taskbar-window {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+}
